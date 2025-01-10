@@ -1,0 +1,274 @@
+/* 테스트 css */
+/* 부모 요소 */
+
+/* 지점 목록 스타일 */
+.list-item {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .list-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* 선택된 지점 스타일 */
+  .showroom-details {
+    padding: 15px;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* 페이지네이션 버튼 스타일 */
+  .page-button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .page-button.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  
+  .page-button:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+.search-results ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search-results li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .search-results li:hover {
+    background-color: #f1f1f1;
+  }
+
+.img_container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* 반응형 이미지 */
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 이미지 위에 위치하는 오버레이 div */
+.list_box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 40%;
+    height: 80%;
+    display: flex;
+    color: #fff;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.list_box div {
+    width: 90%;
+}
+
+.list_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item_box {
+    width: 100%;
+    height: 33.3%;
+    padding: 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+    font-size: 1.5rem;
+    border-radius: 0px 0px 0px 0px;
+    box-sizing: border-box;
+}
+/* 테스트 css */
+
+
+
+.title_container>h2 {
+    padding: 60px 0px 50px;
+    font-size: 1.5em;
+    text-align: center;
+    font-weight: 600;
+}
+
+/*
+ .img_container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+} 
+
+ .img_container>img {
+    width: 100%;
+    height: auto;
+    display: block;
+} 
+
+ .list_box {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    background: #fff;
+    opacity: 0.9;
+    border: 1px solid #fff;
+    border-radius: 15px 15px 15px 15px;
+} 
+
+ .list_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 330px;
+    width: 300px;
+    position: relative;
+}
+
+.item_box {
+    flex: 1;
+    text-align: left;
+    padding: 10px 20px;
+} */
+
+.item_box:hover {
+    background-color: #FAFAFA;
+}
+
+.item_box strong {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+.item_box:nth-child(1) {
+    border-bottom: 1px solid #ccc;
+}
+
+.item_box:nth-of-type(2) {
+    border-bottom: 1px solid #ccc
+}
+
+.item_box:nth-of-type(3) {
+    border-bottom: none;
+}
+
+.map-pin::before {
+    content: '📌';
+}
+
+.tel-pin {
+    margin: 25px 15px;
+}
+
+.tel-pin::before {
+    content: '🕻';
+}
+
+.time-pin::before {
+    content: '🕖';
+}
+
+.item_box > ul >li {
+    list-style-type: none;
+    display: inline;
+    font-size: 12px;
+}
+
+.addrP {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+
+/* 기본 스타일 (800px 이상일 때 모든 th와 td가 보임) */
+/* .table_div table th,
+    .table_div table td {
+    display: table-cell;
+} */
+
+/* 1200px 이하일 때  */
+@media screen and (max-width: 1200px) {
+    .item_box strong {
+        font-size: 1rem;
+    }
+
+    .item_box {
+        padding: 3% 2%;
+    }
+
+    .list_box {
+        top: 20px;
+        left: 20px;
+    }
+
+    .item_box > ul >li {
+        list-style-type: none;
+        display: inline;
+        font-size: 12px;
+        line-height: 12px;
+    }
+}
+
+/* 800px 이하일 때 */
+@media screen and (max-width: 800px) {
+    .item_box {
+        font-size: 1.2rem; /* 작은 화면에서는 폰트 크기 줄이기 */
+        border-radius: 0;
+    }
+    .list_box {
+        position: static;
+        width: 100%;
+        
+    }
+
+    .list_container {
+        display: flex;
+    }
+
+    .list_box div {
+        width: 100%;
+    }
+}
+
+/* 480px 이하일 때  */
+@media screen and (max-width: 480px) {
+
+}
+

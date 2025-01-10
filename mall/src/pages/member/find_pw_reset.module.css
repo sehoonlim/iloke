@@ -1,0 +1,63 @@
+.resetContainer {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.resetTitle {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.resetPwMsg {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.resetPwMsg p{
+    font-size: 15px;
+}
+
+.mypageIcon {
+    font-size: 113px; 
+    position: relative; 
+    margin: 20px 0px;
+}
+
+/* 800px 이하에서 반응형 설정 */
+@media screen and (max-width: 800px) {
+    .resetContainer {
+      width: 100%;
+      margin: auto;
+      padding: 0px;
+      margin-top: 20px;
+    }
+    .resetTitle{
+      font-size: 1.5rem;
+    }
+  
+  }
+  
+  /* 480px 이하에서 반응형 설정 */
+  @media screen and (max-width: 480px) {
+    .resetContainer {
+      width: 100%;
+      padding: 0px;
+      margin-top: 20px;
+      /* font-size: 0.8rem; */
+    }
+    .resetTitle{
+      font-size: 1.5rem;
+    }
+  
+    .link-button{
+      font-size: 0.7rem;
+      padding: 3px;
+    }
+  }

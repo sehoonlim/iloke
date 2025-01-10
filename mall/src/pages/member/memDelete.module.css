@@ -1,0 +1,154 @@
+  .delSection {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .delSection h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+    text-align: left;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  .delGuide {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .delSection h3 {
+    font-size: 1.2rem;
+  }
+  
+  .delGuide p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .delForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .formGroup input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 0.9rem;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  
+  .buttonGroup button {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    color: #fff;
+    background-color: #06adc3;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .buttonGroup button[type="button"] {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  
+  .buttonGroup button:hover {
+    background-color: #0595a6;
+  }
+  
+  .buttonGroup button[type="button"]:hover {
+    background-color: #ddd;
+  }
+  
+  /* 반응형 스타일 */
+  
+  /* 800px 이하 화면용 */
+  @media (max-width: 800px) {
+    .delSection {
+      padding: 15px;
+    }
+  
+    .delGuide {
+      padding: 15px;
+    }
+  
+    .formGroup input {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .buttonGroup button {
+      width: 100%;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* 480px 이하 화면용 */
+  @media (max-width: 480px) {
+    .delSection h2 {
+      font-size: 1.5rem;
+    }
+  
+    .delGuide h3 {
+      font-size: 1rem;
+    }
+  
+    .delGuide p {
+      font-size: 0.9rem;
+    }
+  
+    .formGroup label {
+      font-size: 0.9rem;
+    }
+  
+    .formGroup input {
+      font-size: 0.8rem;
+      padding: 6px;
+    }
+  
+    .buttonGroup {
+      flex-direction: column;
+    }
+  
+    .buttonGroup button {
+      width: 100%;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+  }

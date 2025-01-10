@@ -1,0 +1,72 @@
+/* 회원 상세 정보 스타일 */
+.mem-detail {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mem-detail .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mem-detail .info div {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+/* 액션 버튼 */
+.mem-detail .actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.mem-detail .actions button {
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mem-detail .actions .list {
+  background-color: #06adc3;
+  color: #fff;
+}
+
+.mem-detail .actions .delete {
+  background-color: #d9534f;
+  color: #fff;
+}
+
+/* 마일리지 내역 */
+.mileage-section {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.mileage-section .header,
+.mileage-section .datarow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 10px 0;
+}
+
+.mileage-section .headercell,
+.mileage-section .datacell {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.mileage-section .no-data {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+}

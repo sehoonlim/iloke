@@ -1,0 +1,47 @@
+CREATE TABLE file_manage(
+    id VARCHAR(14) NOT NULL COMMENT '고유 id',
+    turn int(2) NOT NULL COMMENT '순서',
+    api_url VARCHAR(50) DEFAULT NULL COMMENT '요청 url',
+    org_name VARCHAR(100) NOT NULL COMMENT '원본 파일명',
+    new_name VARCHAR(255) NOT NULL COMMENT '변경 파일명',
+    ext VARCHAR(10) DEFAULT NULL COMMENT '확장자명',
+    path VARCHAR(255) DEFAULT NULL COMMENT '파일 저장 경로',
+    size BIGINT DEFAULT NULL COMMENT '파일 크기',
+    dsct TEXT DEFAULT NULL COMMENT '설명',
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
+    PRIMARY KEY (id, turn)
+) COMMENT = '파일 관리 테이블';
+
+CREATE TABLE board (
+    id VARCHAR(14) PRIMARY KEY NOT NULL COMMENT 'bd + yyyyMMdd + 4자리 시퀀스',
+    code CHAR(2) NOT NULL COMMENT '게시판 종류별 코드',
+    title VARCHAR(100) NOT NULL COMMENT '게시글 제목',
+    contents TEXT NOT NULL COMMENT '게시글 내용',
+    img_no VARCHAR(14) DEFAULT NULL COMMENT '첨부 이미지 코드',
+    products_id VARCHAR(14) DEFAULT NULL COMMENT '상품 ID',
+    score int(1) DEFAULT NULL COMMENT '별점',
+    delete_yn BOOLEAN DEFAULT false COMMENT '삭제여부',
+    read_no INT(3) NOT NULL DEFAULT 0 COMMENT '조회수, 기본값 0',
+    start_date DATETIME DEFAULT NULL COMMENT '시작 일시'
+    end_date DATETIME DEFAULT NULL COMMENT '종료 일시'
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
+) COMMENT = '게시판 테이블';
+
+                    
+CREATE TABLE answer (
+    id VARCHAR(14) NOT NULL COMMENT '고유id',
+	 turn INT(3) NOT NULL DEFAULT 1 COMMENT '순번',      
+    comment text NOT NULL  COMMENT '답변',     
+	 delete_yn TINYINT(1) NOT NULL DEFAULT '0' COMMENT '삭제여부',                 
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
+	 PRIMARY KEY (id, turn)            
+) COMMENT = '답변 관리';

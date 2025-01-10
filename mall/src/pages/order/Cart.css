@@ -1,0 +1,419 @@
+a:visited {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.order_top{
+    /* position: relative; */
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+
+/* '장바구니' 글자 */
+.order_top p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.order_top2 {
+    float: right;
+    margin-bottom:11px;
+}
+
+.order_top2 ol {
+    list-style: none;
+    display: flex;  
+    line-height: 49px;
+}
+
+.order_top2 ol li {
+    list-style: none;
+    
+}
+
+.bold_li span {
+    color: #000;
+    font-weight: bold;
+}
+
+.order_top2 ol li span:nth-child(1) {
+    padding: 5px;
+}
+
+.order_top2 ol li:nth-child(1) span:after,
+.order_top2 ol li:nth-child(2) span:after {
+    content:'>';
+    font-size:0.8rem;
+    font-weight:bold;
+    padding-left: 10px;
+}
+
+.order_top2 ol li:nth-child(2) span,
+.order_top2 ol li:nth-child(3) span {
+    color: #cccccc;
+}
+
+.table_div{
+    display: block;
+    top: 9px;
+    /* position: relative; */
+}
+
+.table_div table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.table_div tr:nth-child(n+2) {
+    /* 2번째 이후 요소에게 모두 적용 */
+    background-color: white;
+    height: 78px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.table_div th {
+    background-color: #f5f5f5;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.table_div tr th {
+    line-height: 40px;
+}
+
+.table_div tr td {
+    vertical-align: middle;
+    font-size: 0.8rem;
+}
+
+/* 상품금액, 합계금액, 배송비 */
+.table_div tr th:nth-child(4), 
+.table_div tr th:nth-child(6), 
+.table_div tr th:nth-child(7){
+    width: 102px;
+}
+
+/* 체크박스 */
+.table_div tr th:nth-child(1){
+    width: 45px;
+}
+
+/* 상품/옵션정보 */
+.table_div tr th:nth-child(2){
+    width: 50%;
+}
+
+
+/* 수량 */
+.table_div tr th:nth-child(3){
+    width: 120px;
+    
+}
+
+/* 할인/적립 */
+.table_div tr th:nth-child(5){
+    width: 133px;
+}   
+
+
+/* 상품란 */
+
+/* 체크박스 */
+table tr td:nth-child(1){
+    
+}
+/* 상품/옵션 */
+table tr td:nth-child(2){
+    text-align: left;
+}
+table tr td:nth-child(2) img {
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+/* 수량 */
+.table_div table tr td:nth-child(3){
+    border-left: 1px solid #cccccc;
+    font-weight: bold;
+}
+/* 상품금액 */
+.table_div table tr td:nth-child(4){
+    border-left: 1px solid #cccccc;
+    font-weight: bold;
+}
+/* 할인/적립 */
+.table_div table tr td:nth-child(5){
+    border-left: 1px solid #cccccc;
+}
+/* 합계금액 */
+.table_div table tr td:nth-child(6){
+    border-left: 1px solid #cccccc;
+    font-weight: bold;
+}
+/* 배송비 */
+.table_div table tr td:nth-child(7){
+    border-left: 1px solid #cccccc;
+    color: #999999;
+    font-weight: 300;
+}
+
+#empty_cart_message {
+    height: 130px;
+    display: block;
+    margin-top: 60px;
+    position: relative;
+    border: 1px solid #cccccc;
+}
+
+
+.btn_div {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_div a {
+    text-decoration: underline; 
+    text-decoration-color: black; 
+    color: black; 
+}
+
+/* .delete_btn_div {
+    width: 200px;
+} */
+
+.list_link {
+    border-bottom: solid 1px black;
+}
+
+.price_div {
+    height: 130px;
+    border: 1px solid #cccccc;
+    margin-top: 30px;
+}
+
+.price_sum_right{
+    float: right;
+    display: inline-flex;
+    padding: 37px 40px 40px 25px;
+    text-align: right;
+}
+
+.left_div {
+    width: 140px;
+}
+
+.center_div {
+    width: 62px;
+}
+
+.right_div {
+    width: 92px;
+}
+
+.symbol_left_div {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.symbol_right_div {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.left_price {
+    margin-top: 10px;
+}
+
+.center_price {
+    margin-top: 10px;
+}
+
+.right_price {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+.order_bottom_div {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.small_left_div button, .small_right_div button {
+    padding: 0px 10px;
+    width: 140px;
+    height: 50px;
+    border: solid 1px #cccccc;
+    background-color: white;
+    color: #111111;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+.small_left_div button:hover, .small_right_div button:hover {
+    font-weight: 500;
+}
+
+#product_btn {
+    /* position: relative;
+    float: right;
+    top: -50px; */
+}
+
+.small_left_div {
+    /* width: 30%; */
+}
+
+.small_left_div a {
+    float: right;
+    top: 10px;
+    position: relative;
+    font-size: 1rem;
+}
+
+.small_right_div {
+    /* width: 30%; */
+    float: right;
+    /* position: relative; */
+}
+
+/* .small_right_div #product_btn {
+    float: right;
+    cursor: pointer;
+} */
+
+.order_btn_div {
+    position: relative;
+    top: -13px;
+    text-align: center;
+}
+
+/* .small_right_div button {
+    width: 190px;
+    height: 45px;
+} */
+
+/* #select_buy_btn{
+    margin-right: 3px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    color: #3e3d3c;
+    cursor: pointer;
+} */
+
+#all_buy_btn{
+    width: 300px;
+    height: 50px;
+    background-color: #06ADC3;
+    color: white;
+    font-size: 1rem;
+    vertical-align: middle;
+    border: none;
+    cursor: pointer;
+}
+
+#all_buy_btn:hover {
+    background-color: #005D75;
+}
+
+#tot_chk {
+
+}
+
+
+/* 반응형 */
+
+/* 기본 스타일 (800px 이상일 때 모든 th와 td가 보임) */
+/* .table_div table th,
+.table_div table td {
+    display: table-cell;
+} */
+
+/* 800px 이하일 때 체크박스, 상품/옵션정보, 수량, 합계금액만 표시 */
+@media screen and (max-width: 800px) {
+    /* 숨길 열: 상품금액, 할인/적립, 배송비 */
+    .table_div table th:nth-child(4),
+    .table_div table th:nth-child(5),
+    .table_div table th:nth-child(7),
+    .table_div table td:nth-child(4),
+    .table_div table td:nth-child(5),
+    .table_div table td:nth-child(7),
+    .order_top2 {
+        display: none; 
+    }
+
+    .price_div {
+        height: 241px;
+    }
+
+    .price_sum_right {
+        padding: 10px 0 10px 0;
+        display: flex;
+        justify-content: center;   /* 수평 중앙 정렬 */
+        align-items: center;       /* 수직 중앙 정렬 */
+        flex-direction: column;    /* 요소들을 세로로 쌓이게 설정 */
+        text-align: center;        /* 텍스트 내용 중앙 정렬 */
+        width: 100%;
+    }
+    .left_price {
+        margin-bottom: 10px;
+    }
+
+    .center_div {
+        margin-top: 10px;
+    }
+
+    .symbol_left_div {
+        margin: 3px 0px 3px 0px;
+    }
+
+    .symbol_right_div {
+        margin: 15px 0px 10px 0px;
+    }
+
+    #all_buy_btn {
+        width: 100%;
+    }
+    
+}
+
+/* 480px 이하일 때 체크박스, 상품/옵션정보, 합계금액만 표시 */
+@media screen and (max-width: 480px) {
+    /* 숨길 열: 수량 */
+    .table_div table th:nth-child(3),
+    .table_div table td:nth-child(3) {
+        display: none; /* 숨기기 */
+    }
+
+
+    .content_jh {
+        overflow: hidden;  /* 넘치는 부분을 숨김 */
+        width: 400px;
+    }
+    
+    body {
+        overflow-x: auto;  /* 가로 스크롤을 허용하여 구조 유지 */
+    }
+
+}

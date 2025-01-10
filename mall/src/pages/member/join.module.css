@@ -1,0 +1,233 @@
+td {
+    margin: 0px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 130%;
+}
+
+h4 {
+    font-size: 110%;
+}
+
+table {
+    font-size: 1rem;
+}
+
+tr {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+p {
+    padding-top: 10px;
+    font-size: 0.8rem;
+}
+/* button {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+} */
+
+button {
+    width: 140px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    width: 33%;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.tab.active {
+    background-color: #005D75;
+    color: white;
+}
+
+.center {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn_member_cancel{
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.btn_comfirm {
+    background-color: #06adc3;
+    columns: #ffffff;
+    color: #ffffff;
+}
+
+.join_base_section {
+    
+    width: 100%;
+    justify-content: center; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+/* .join_base_wrap {
+    padding: 30px;
+    font-family: arial;
+    font-size: 24px;
+    margin: 25px;
+    width: 100%;
+    box-shadow: 0 0 5px #a5a5a5;
+} */
+.buttonBox {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    gap: 10px;
+}
+.inputHead {
+    background-color: #f5f5f5;
+    width: 40%;
+    padding: 0px 30px;
+}
+.esse {
+    color: #f294b2;
+}
+.textInput {
+    width: 100%;
+}
+
+.checkbox-label {
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 */
+}
+
+.checkbox-label select {
+    height: 35px;
+    width: 130px;
+}
+
+select[name="calendars"]{
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 */
+}
+
+.checkbox-label input[type="text"] {
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 */
+}
+
+.datepicker-container {
+    width: 69%;
+}
+
+input[type='password']{
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+}
+
+input[type="date"] {
+    font-size: 1rem;
+    height: 35px;
+    width: 100%;
+}
+
+.error {
+    color: red;
+}
+  
+.success {
+    color: green;
+}
+
+
+.idMessage {
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+  
+.idMessage.success, .pwMessage.success, .pwMatchMessage.success {
+  color: green;
+}
+  
+.idMessage.error, .pwMessage.error, .pwMatchMessage.error {
+  color: red;
+}
+
+.emailContainer {
+  /*display: flex;*/
+  align-items: center;
+  gap: 10px; /* input과 select 사이 간격 */
+}
+
+.emailContainer input[type="text"] {
+  width: 65%; /* 적당한 너비를 설정하여 한 줄에 보기 좋게 배치 */
+  height: 40px;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.emailContainer select {
+  width: 33%; /* 셀렉트박스 너비 조정 */
+  height: 40px;
+}
+
+section{
+    width: 100%
+}
+
+/* 600px 이하에서 반응형 설정 */
+@media screen and (max-width: 600px) {
+    .inputHead{
+        font-size: 0.8rem;
+        padding: 0px 20px;
+    }
+
+    .join_base_section{
+        width: 100%;
+    }
+}
+
+/* 480px 이하에서 반응형 설정 */
+@media screen and (max-width: 480px) {
+    .inputHead{
+        padding: 0px 5px;
+    }
+    .emailContainer input[type="text"] {
+        width: 100%; /* 적당한 너비를 설정하여 한 줄에 보기 좋게 배치 */ 
+      }
+      .emailContainer select {
+        width: 100%; /* 셀렉트박스 너비 조정 */
+      }
+      .join_base_section{
+        width: 100%;
+    }
+}

@@ -1,0 +1,54 @@
+CREATE Table option_keyword(
+    code INT AUTO_INCREMENT PRIMARY KEY COMMENT '고유 코드 자동생성',
+    type BOOLEAN NOT NULL COMMENT '옵션or키워드 구분',
+    name VARCHAR(100) NOT NULL COMMENT '명칭',
+    req BOOLEAN NOT NULL COMMENT '필수 선택 여부',
+    status BOOLEAN NOT NULL COMMENT '사용 여부',
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
+) COMMENT = '키워드, 옵션 항목';
+
+CREATE Table opKey_value(
+    main_code INT NOT NULL COMMENT '상위 항목 고유 코드',
+    code INT NOT NULL COMMENT '하위 값 고유 코드',
+    type BOOLEAN NOT NULL COMMENT '옵션or키워드 구분',
+    name VARCHAR(100) NOT NULL COMMENT '값 명칭',
+    price INT NOT NULL COMMENT '값 가격',
+    status TINYINT(1) NOT NULL COMMENT '사용 여부',
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
+    PRIMARY KEY (main_code, code)
+) COMMENT = '옵션,키워드 하위 값';
+
+CREATE Table products(
+    id VARCHAR(14) PRIMARY KEY COMMENT '고유 id',
+    name VARCHAR(100) NOT NULL COMMENT '상품명',
+    price INT NOT NULL COMMENT '상품 가격',
+    discount INT COMMENT '할인율',
+    detail_exist BOOLEAN NOT NULL COMMENT '상세 이미지 유무',
+    quan INT NOT NULL COMMENT '등록 재고 수량',
+    status BOOLEAN NOT NULL COMMENT '사용 여부',
+    benefit TEXT COMMENT '혜택',
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
+) COMMENT = '상품';
+
+
+CREATE Table product_detail(
+    main_code INT NOT NULL COMMENT '상위 option_keyword 코드',
+    code INT NOT NULL COMMENT 'opkey_value 고유 코드',
+    id VARCHAR(14)  NOT NULL COMMENT '고유 products id',
+    turn INT(2) NOT NULL COMMENT '순서',
+    type CHAR(1) NOT NULL COMMENT '옵션or키워드 구분',
+    reg_id VARCHAR(60) NOT NULL COMMENT '등록자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '등록 일시',
+    upt_id VARCHAR(60) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시',
+    PRIMARY KEY (main_code, code, id)
+) COMMENT = '상품 디테일';

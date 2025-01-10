@@ -1,0 +1,103 @@
+p {
+    font-size: 0.8rem;
+  }
+  
+  .btnJoin {
+    width: 80%;
+    max-width: 600px;
+    height: 60px;
+    background-color: #06adc3;
+    border: 0;
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
+  
+  .btnJoin:hover {
+    background-color: #005d75;
+  }
+  
+  .joinBaseSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .joinBaseWrap {
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .benefitsSection {
+    text-align: center;
+    color: #111111;
+    padding: 30px;
+  }
+  
+  .benefitsSection h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .benefitsSection p {
+    font-size: 1rem;
+    color: #767676;
+  }
+  
+  .benefitsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  
+  .benefitBox {
+    background-color: #ffffff;
+    border: 1px solid #f5f5f5;
+    padding: 20px;
+    width: 260px;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 980px) {
+    .benefitBox {
+      width: 100%;
+    }
+  
+    #btnJoin {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+  
+  /* Benefit box styles */
+  .benefitBox .icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .benefitBox h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .benefitBox p {
+    font-size: 1rem;
+    color: #111111;
+    font-weight: bold;
+  }
+  
+  /* Notes and links */
+  .note {
+    font-size: 12px;
+    color: #767676;
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  
+  .underline {
+    text-decoration: underline;
+  }

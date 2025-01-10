@@ -1,0 +1,33 @@
+.content_detail{
+    width: '100%';
+    height: '150px';
+}
+
+.custom_image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;  /* 비율유지하는거 */
+    margin: 5px; /* 간격 */
+}
+
+.content_head{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.board_btn1 {
+    border: 1px solid #777;
+    border-radius: 4px;
+    background: #777;
+    color: #fff;
+}
+.board_btn2 {
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+.board_btn3 {
+    border: 1px solid#333;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}

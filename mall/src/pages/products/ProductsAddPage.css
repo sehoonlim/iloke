@@ -1,0 +1,166 @@
+.join_base_section td {
+    margin: 0px;
+    padding: 10px;
+}
+.join_base_section h1 {
+    font-size: 200%;
+}
+
+.join_base_section h2 {
+    font-size: 150%;
+}
+
+.join_base_section h3 {
+    font-size: 130%;
+}
+
+.join_base_section h4 {
+    font-size: 110%;
+}
+
+.join_base_section table {
+    font-size: 1rem;
+}
+
+.join_base_section tr {
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+.join_base_section .join_base_wrap{width: 100%;}
+.join_base_section p {
+    padding-top: 10px;
+    font-size: 0.8rem;
+}
+
+.join_base_section button {
+    width: 140px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.join_base_section .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.join_base_section .tab {
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    width: 33%;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.join_base_section .tab.active {
+    background-color: #005D75;
+    color: white;
+}
+
+.join_base_section .center {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+.join_base_section .btn_comfirm {
+    background-color: #06adc3;
+    columns: #ffffff;
+    color: #ffffff;
+}
+.join_base_section {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* 가로 정렬 */
+    align-items: center; /* 세로 정렬 */
+    min-width: 600px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+}
+.join_base_section .buttonBox {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    gap: 10px;
+}
+.join_base_section .inputHead {
+    background-color: #f5f5f5;
+    width: 20%;
+    min-width: 200px;
+    padding: 0px 30px;
+    position: relative;
+}
+.join_base_section .inputHead > i{
+    color: #F294B2;
+    font-size: 6px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+}
+.join_base_section .esse {
+    color: #f294b2;
+}
+.join_base_section .textInput {
+    width: 100%;
+}
+
+.join_base_section .checkbox-label {
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.join_base_section .checkbox-label input[type="checkbox"] {
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 */
+}
+
+.join_base_section .checkbox-label select {
+    height: 35px;
+    width: 130px;
+}
+
+.join_base_section select[name="calendars"]{
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 */
+}
+
+.join_base_section .checkbox-label input[type="text"] {
+    margin-right: 10px; /* 체크박스와 텍스트 사이의 간격 */
+}
+
+.join_base_section .datepicker-container {
+    width: 69%;
+}
+
+.join_base_section input[type='password']{
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+}
+
+.join_base_section input[type="date"] {
+    font-size: 1rem;
+    height: 35px;
+    width: 100%;
+}
+.join_base_section .hasRadio label{padding-right: 20px; cursor: pointer;}
+.join_base_section .hasRadio label:hover{color: #06ADC3;}
+.join_base_section .hasRadio label input{margin-right: 5px;}
+.join_base_section .hasUnit{
+    display: flex;
+    align-items: center;
+}
+
+.join_base_section textarea{
+    min-width: 100%;
+    max-width: 750px;
+    min-height: 55px;
+}
+.join_base_section .hasUnit span{
+    padding-left: 10px;
+}

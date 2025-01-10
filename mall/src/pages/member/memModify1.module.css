@@ -1,0 +1,129 @@
+.infoChangeContainer {
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+.infoChangeContainer p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  .inputContainer {
+    background-color: #f8f9f9;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+  }
+  
+  .inputContainer span {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .inputContainer .userId {
+    font-weight: bold;
+  }
+  
+  .inputContainer input[type="password"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 180px;
+  }
+  
+  .modifyButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .modifyButtons > button {
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+  }
+  
+  .modifyButtons > button[type="button"] {
+    background-color: #ddd;
+    color: #555;
+  }
+  
+  .modifyButtons > button[type="submit"] {
+    background-color: #333;
+  }
+
+
+  @media (max-width: 800px) {
+    .infoChangeContainer {
+      width: 90%;
+      margin-top: 50px;
+    }
+  
+    h2 {
+      font-size: 22px;
+    }
+  
+    .inputContainer {
+      padding: 20px;
+    }
+  
+    .inputContainer input[type="password"] {
+      width: 100%;
+    }
+  
+    .modifyButtons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .modifyButtons > button {
+      width: 100%;
+    }
+
+  }
+  
+  @media (max-width: 480px) {
+    .infoChangeContainer {
+      width: 95%;
+      margin-top: 50px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .inputContainer {
+      padding: 15px;
+    }
+  
+    .inputContainer span {
+      font-size: 14px;
+    }
+  
+    .modifyButtons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .modifyButtons > button {
+      
+      font-size: 13px;
+    }
+}

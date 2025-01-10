@@ -1,0 +1,60 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "css-loader": "^7.1.2",
+    "dompurify": "^3.2.3",
+    "postcss-loader": "^8.1.1",
+    "quill": "^2.0.3",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-confirm-alert": "^3.0.6",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.1",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^10.0.6",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.83.0",
+    "sass-loader": "^16.0.4",
+    "swiper": "^11.1.15",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "cross-env PORT=5500 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "sass": "^1.83.0"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "keywords": []
+}

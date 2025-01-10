@@ -1,0 +1,61 @@
+.findPwContainer {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+}
+
+.findPwContainer p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.findPwTitle {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.findMsgDiv {
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.findMsgDiv p{
+    font-size: 15px;
+}
+
+.mypageIcon {
+    font-size: 113px; 
+    position: relative; 
+    margin: 20px 0px;
+}
+
+/* 800px 이하에서 반응형 설정 */
+@media screen and (max-width: 800px) {
+    .findPwContainer {
+      width: 100%;
+      margin: auto;
+      padding: 0px;
+    }
+    .findPwTitle{
+      font-size: 1.5rem;
+    }
+  
+  }
+  
+  /* 480px 이하에서 반응형 설정 */
+  @media screen and (max-width: 480px) {
+    .findPwContainer {
+      width: 100%;
+      padding: 0px;
+      /* font-size: 0.8rem; */
+    }
+    .findPwTitle{
+      font-size: 1.5rem;
+    }
+  }

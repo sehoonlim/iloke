@@ -1,0 +1,166 @@
+a:visited {
+    color: inherit; 
+    text-decoration: overline;
+
+}
+
+.complete_top{
+    /* position: relative; */
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* '주문완료' 글자 */
+.complete_top p {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.complete_top2 {
+    float: right;
+    margin-bottom:11px;
+}
+
+.complete_top2 ol {
+    list-style: none;
+    display: flex;  
+    line-height: 49px;
+}
+
+.complete_top ol li {
+    list-style: none;
+    
+}
+
+.bold_li span {
+    color: #000;
+    font-weight: bold;
+}
+
+
+.complete_top2 ol li span:nth-child(1) {
+    padding: 5px;
+}
+
+.complete_top2 ol li:nth-child(1) span:after,
+.complete_top2 ol li:nth-child(2) span:after {
+    content:'>';
+    font-size:0.9rem;
+    font-weight:bold;
+    padding-left: 10px;
+}
+
+.complete_top2 ol li:nth-child(1) span,
+.complete_top2 ol li:nth-child(2) span {
+    color: #cccccc;
+}
+
+.complete_msg_div {
+    margin-top: 71px;
+    text-align: center;
+}
+
+.complete_msg_div p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+/* 주문요약정보 */
+
+.complete_table strong {
+    font-weight: bold;
+}
+
+.small_price {
+    font-size: 0.8rem;
+}
+
+.big_price {
+    font-size: 1.3rem;
+}
+
+.order_tit{
+    height: 25px;
+    font-size: 1.3rem;
+    margin-top: 28px;
+    margin-bottom: 3px;
+}
+
+
+.complete_table_div{
+    display: block;
+    top: 9px;
+    /* position: relative; */
+    margin-bottom: 52px;
+}
+
+.complete_table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #cccccc;
+    margin-top: 9px;
+    font-size: 0.8rem;
+}
+
+.complete_table tr {
+    line-height: 30px;
+    border-bottom: 1px solid #cccccc;
+    text-align: left;
+    height: 50px;
+}
+.complete_table tr th {
+    width: 200px;
+    padding: 15px 10px 14px 19px;
+    background-color: #f5f5f5;
+}
+.complete_table tr td {
+    padding: 15px 10px 14px 19px;
+}
+
+/* 확인버튼 */
+
+.complete_btn_div {
+    text-align: center;
+    margin-bottom: 200px; /* 맨아래 여백. 나중에 지워야됨 */
+}
+
+.complete_btn {
+    width: 300px;
+    height: 50px;
+    background-color: #06ADC3;
+    color: white;
+    font-size: 1rem;
+    vertical-align: middle;
+    border: none;
+    cursor: pointer;
+}
+
+.complete_btn:hover {
+    background-color: #005D75;
+}
+
+
+@media screen and (max-width: 800px) {
+    .complete_msg_div {
+        margin-top: 0;
+        /* margin-bottom: 10px; */
+    }
+
+    .complete_top2 {
+        display: none; 
+    }
+
+    .order_tit {
+        margin-top: 45px;
+        font-size: 1rem;
+        margin-bottom: -6px;
+    }
+}

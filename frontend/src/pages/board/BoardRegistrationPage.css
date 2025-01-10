@@ -1,0 +1,305 @@
+.inquiry-section {
+  /* width: 100%; */
+  /* max-width: 1200px; */
+  min-height: 500px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.inquiry-section > h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 주문목록 / 배송조회 */
+.mypage-date-check {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.mypage-date-check .mypage-date-search .mypage-date-search-btn {
+  width: 100px;
+  padding: 7px 0;
+  display: block;
+  background-color: #06adc3;
+  color: #fff;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mypage-date-check .mypage-date-search .mypage-date-search-btn:hover {
+  background-color: #005d75;
+}
+
+.mypage-date-check .mypage-date-search .mypage-date-search-btn::after {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 1rem;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  color: #fff;
+  margin: 0 5px;
+}
+
+/* 검색 조회 */
+.mypage-date-check .mypage-date-period {
+  display: flex;
+  align-items: center;
+}
+
+.mypage-date-check .mypage-date-period .on {
+  background: #8f364d;
+  color: #111111;
+}
+
+.mypage-date-check .mypage-date-period .mypage-period-text {
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+
+.mypage-date-check .mypage-date-period button {
+  width: 54px;
+  height: 30px;
+  margin: 0 0 0 -1px;
+  background: #fff;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.mypage-date-check .mypage-date-box {
+  margin: 0 10px;
+}
+
+.mypage-date-check .mypage-date-box .mypage-first-date,
+.mypage-date-check .mypage-date-box .mypage-last-date {
+  width: 150px;
+  /* background: url(../../content/img/sample/icon_calendar.png) right center no-repeat; */
+  height: 30px;
+  border: 1px solid #ccc;
+  padding: 0 0 0 10px;
+  font-size: 0.8rem;
+}
+
+.inquiry-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.inquiry-section th {
+  text-align: center;
+  padding: 13px 10px 15px 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  background-color: #fbfbfb;
+  width: 1200px;
+  font-size: 1rem;
+}
+
+.inquiry-section th:nth-child(1) {
+  width: 200px;
+}
+
+.inquiry-section th:nth-child(2) {
+  width: 200px;
+}
+
+.inquiry-section th:nth-child(3) {
+  width: 400px;
+}
+
+.inquiry-section th:nth-child(4) {
+  width: 200px;
+}
+
+.inquiry-section th:nth-child(5) {
+  width: 200px;
+}
+
+.inquiry-section td {
+  text-align: center;
+  padding: 13px 10px 15px 10px;
+  border-bottom: 1px solid #dbdbdb;
+  width: 1200px;
+  font-size: 0.8rem;
+  height: 20px;
+}
+
+.inquiry-section td:nth-child(1) {
+  width: 200px;
+}
+
+.inquiry-section td:nth-child(2) {
+  width: 200px;
+}
+
+.inquiry-section td:nth-child(3) {
+  width: 400px;
+  text-align: left;
+}
+
+.inquiry-section td:nth-child(4) {
+  width: 200px;
+}
+
+.inquiry-section td:nth-child(5) {
+  width: 200px;
+}
+
+.inquiry-section a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.inquiry-section a:hover {
+  text-decoration: underline;
+}
+
+.write-btn {
+  width: 140px;
+  height: 50px;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #06adc3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.write-btn:hover {
+  background-color: #005d75;
+}
+
+.write-btn > a {
+  color: #fff;
+}
+
+.mypage-date-period button.active {
+  background-color: #8f364d; /* Blue color */
+  color: #fff; /* White text */
+}
+
+.mypage-date-period button {
+  background-color: #fff;
+  color: #767676;
+}
+
+.detail-pane {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* 원하는 크기 */
+  max-width: 1000px; /* 최대 크기 제한 */
+  min-height: 100px; /* 최대 높이 제한 */
+  background: #ffffff;
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 그림자 */
+  z-index: 1000; /* 다른 요소보다 위에 표시 */
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* 모달 바깥의 반투명 배경 추가 */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* 반투명 검정 배경 */
+  z-index: 999; /* 모달 뒤에 표시 */
+}
+
+@media screen and (max-width: 1200px) {
+  .mypage-date-check {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .mypage-date-check .mypage-date-period button {
+    display: none;
+  }
+}
+
+/* 800px 이하일 때 */
+@media screen and (max-width: 800px) {
+  .filter-header {
+    padding-bottom: 30px;
+  }
+  .mypage-date-check .mypage-date-box {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+  }
+  .mypage-date-check .mypage-date-period {
+    display: none;
+  }
+
+  .mypage-date-check {
+    flex-direction: column;
+  }
+  .mypage-date-search {
+    width: 100%;
+    text-align: right;
+  }
+
+  .mypage-date-check .mypage-date-search .mypage-date-search-btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .mypage-date-check .mypage-date-box .mypage-first-date,
+  .mypage-date-check .mypage-date-box .mypage-last-date {
+    width: 100%;
+  }
+
+  .mypage-date-check .mypage-date-box input {
+    width: 100%;
+  }
+
+  mypage-date-check .mypage-date-box {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    display: none;
+  }
+
+  table th:nth-child(4),
+  table td:nth-child(4) {
+    font-size: 0.8rem;
+  }
+}
+
+/* 480px 이하일 때 날짜 카테고리도 숨김 */
+@media (max-width: 480px) {
+  table th:nth-child(1),
+  table td:nth-child(1) {
+    font-size: 0.8rem;
+  }
+
+  table th:nth-child(2),
+  table td:nth-child(2) {
+    display: none;
+  }
+
+  table th:nth-child(3),
+  table td:nth-child(3) {
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.agreeContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-top: 30px;
+}
+
+.center{
+    text-align: center;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    width: 33%;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.tab.active {
+    background-color: #005D75;
+    color: #ffffff;
+}
+
+.termsContainer {
+    margin-bottom: 20px;
+}
+
+.termsHeader {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.termsHeader input[type="checkbox"] {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px
+}
+
+.termsHeader label {
+    font-weight: bold;
+}
+
+.termsHeader p {
+    font-size: 0.8rem;
+    color: #999999;
+    margin-left: 10px;
+}
+
+.termsSection {
+    margin-bottom: 20px;
+}
+
+.termsSection input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.termsSection a {
+    float: right;
+    font-size: 12px;
+    color: #999999;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.termsTextbox {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    height: 200px;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #666666;
+}
+
+.buttonContainer {
+    text-align: center;
+}
+
+.important_check{
+    text-align: center;
+}
+
+.btnNext{
+    width: 140px;
+    height: 50px;
+    background-color: #06adc3;
+    color: #ffffff;
+}
+
+.btnNext:hover{
+    background-color: #005D75;
+    color: #ffffff;
+}
+
+.btnPrev{
+    width: 140px;
+    height: 50px;
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #cccccc;
+}
+
+.btnPrev:hover{
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font-weight: 500;
+}
+
+/* 800px 이하에서 반응형 설정 */
+@media screen and (max-width: 800px) {
+    .btnNext{
+        width: 99%;
+    }
+    .btnPrev{
+        width: 99%;
+    }
+}

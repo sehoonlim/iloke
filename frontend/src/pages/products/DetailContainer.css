@@ -1,0 +1,8 @@
+
+.value_table {
+    width: 100%; /* 테이블이 컨테이너 너비를 채우도록 */
+    border: 1px solid #ccc;
+    overflow-y: auto; /* 수직 스크롤 활성화 */
+    max-height: 400px; /* 최대 높이 제한 */
+    border-collapse: collapse; /* 테이블 경계선 정리 */
+}

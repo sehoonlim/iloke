@@ -1,0 +1,1003 @@
+* {
+    font-family: "Noto Sans KR", "Roboto";
+}
+
+
+/* 구매확정됨 문구 표시 */
+
+.confirmed-text {
+    color: green;
+    font-weight: bold;
+    margin-left: 8px; /* 배송완료와 구매확정됨 사이의 여백 */
+  }
+
+
+
+/* 버튼 스타일  */
+
+
+.button-group1 {
+    display: flex;        /* 가로 정렬 */
+    gap: 10px;            /* 버튼 간격 */
+  }
+  
+  .action-button {
+    padding: 10px 20px;   /* 버튼 내부 여백 */
+    font-size: 16px;      /* 글자 크기 */
+    border: none;         /* 기본 테두리 제거 */
+    border-radius: 4px;   /* 둥근 모서리 */
+    cursor: pointer;      /* 커서 변경 */
+  }
+  
+  .action-button:first-child {
+    background-color: #4CAF50; /* 녹색 */
+    color: white;
+  }
+  
+  .action-button:last-child {
+    background-color: #f44336; /* 빨간색 */
+    color: white;
+  }
+
+  .memmodiButton {
+    background-color: #06ADC3;
+    color: #fff;
+  }
+
+  .memdelButton {
+    background-color: #dc3545;
+    color: #fff;
+  }
+
+/* 모달 */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .modal select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .modal button {
+    width: 45%;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .modal button:first-of-type {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal button:last-of-type {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+
+  /*  */
+
+.wrap {
+    background-color: #fff;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.mypage {
+    width: 100%;
+}
+
+.order-table .cancel-txt {
+    color: #cccccc;
+}
+
+.order-table .refund-txt {
+    color: #06ADC3;
+}
+
+.full {
+    display: none;
+}
+
+.mypage-top-wrap {
+    display: flex;
+    margin: 20px 0 30px 0;
+    border: 1px solid #ccc;
+}
+
+.mypage-top-info {
+    width: 30%;
+    padding: 70px 0;
+    text-align: center;
+    line-height: 24px;
+}
+
+.mypage-top-wrap .mypage-top-wallet {
+    width: 70%;
+}
+
+
+.mypage .mypage-top-info .mypage-top-text {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.mypage .mypage-top-info .mypage-top-grade {
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+.mypage-top-wrap .mypage-top-wallet .mypage-top-wallet-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+/* 월렛 쿠폰, 마일리지, 예치금 */
+/* .mypage-top-wallet .mypage-top-coupon, */
+.mypage-top-wallet .mypage-top-mileage,
+.mypage-top-wallet .mypage-top-balance {
+    text-align: center;
+    width: 50%;
+    margin: 20px 0;
+}
+
+.mypage-top-wallet .mypage-top-mileage {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+/* .mypage-top-wallet .mypage-top-coupon .coupon-icon, */
+.mypage-top-wallet .mypage-top-mileage .coupon-icon,
+.mypage-top-wallet .mypage-top-balance .coupon-icon {
+    text-align: center;
+    width: 68px;
+    height: 68px;
+}
+
+/* .mypage-top-wallet .mypage-top-coupon .coupon-title, */
+.mypage-top-wallet .mypage-top-mileage .coupon-title,
+.mypage-top-wallet .mypage-top-balance .coupon-title {
+    display: block;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* .mypage-top-wallet .mypage-top-coupon .coupon-count, */
+.mypage-top-wallet .mypage-top-mileage .coupon-count,
+.mypage-top-wallet .mypage-top-balance .coupon-count {
+    display: block;
+}
+
+/* .mypage-top-wallet .mypage-top-coupon .coupon-count a, */
+.mypage-top-wallet .mypage-top-mileage .coupon-count a,
+.mypage-top-wallet .mypage-top-balance .coupon-count a {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* 진행중인 주문 조회 */
+.mypage-order-wrap .mypage-order-title {
+    display: flex;
+    align-items: baseline;
+    padding: 0 0 7px 0;
+}
+
+.mypage-order-wrap .mypage-order-title h3 {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.mypage-order-wrap .mypage-order-title span {
+    font-size: 0.8rem;
+}
+
+/* 주문진행 */
+.mypage-order-list {
+    margin:0 0 30px 0;
+    padding:35px 0 35px 0;
+    font-size:0;
+    border:1px solid #e3e3e3;
+    border-top:1px solid #999999;
+    text-align:center;
+    display: flex;
+    align-items: center;
+}
+
+.mypage-order-list .mypage-order-order {
+    display:inline-block;
+    width:75%;
+    font-size:0;
+    border-right:1px solid #e3e3e3;
+    vertical-align:middle;
+}
+
+
+
+.mypage-order-list .mypage-order-order .mypage-order-info:first-child {
+    padding-left:10px;
+    background:none 0;
+}
+
+.mypage-order-list .mypage-order-order .mypage-order-info b {
+    display:block;
+    padding:0 0 15px 0;
+}
+
+
+/* 주문목록 / 배송조회 */
+
+
+/* 주문목록 / 배송조회 */
+.mypage-date-wrap {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.mypage-date-wrap .mypage-date-check {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search {
+    width: 100%;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search .coupon-date-search-btn {
+    width: 100px;
+    padding: 7px 0;
+    display: block;
+    background-color: #06ADC3;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search .mypage-date-search-btn:hover {
+    background-color: #005D75;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search .mypage-date-search-btn::after {
+    content: '\f002';
+    font-family: FontAwesome;
+    font-size: 1rem;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    color: #fff;
+    margin: 0 5px;
+}
+
+/* 검색 조회 */
+.mypage-date-wrap .mypage-date-check .mypage-date-period .mypage-period-btn {
+    display: block;
+    width: 50px;
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-box {
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-box input {
+    height: 30px;
+    font-size: 0.8rem;
+}
+
+/* 주문목록 / 배송조회 */
+.mypage-date-wrap .mypage-date-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 7px 0;
+}
+
+.mypage-date-wrap .mypage-date-title .mypage-regist {
+    display: block;
+    width: 140px;
+    height: 30px;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #F294B2;
+    text-align: center;
+    line-height: 30px;
+}
+
+.mypage-date-wrap .mypage-date-title .mypage-regist:hover {
+    background-color: #8F364D;
+}
+
+.mypage-date-wrap .mypage-date-title h3 {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search .mypage-date-search-btn {
+    width: 100px;
+    padding: 7px 0;
+    display: block;
+    background-color: #06ADC3;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search .mypage-date-search-btn:hover {
+    background-color: #005D75;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-search .mypage-date-search-btn::after {
+    content: '\f002';
+    font-family: FontAwesome;
+    font-size: 1rem;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    color: #fff;
+    margin: 0 5px;
+}
+
+/* 검색 조회 */
+.mypage-date-wrap .mypage-date-check .mypage-date-period {
+    display: flex;
+    align-items: center;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-period .on {
+    background: #8F364D;
+    color: #fff;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-period .mypage-period-btn {
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-period button {
+    width: 54px;
+    height: 30px;
+    margin: 0 0 0 -1px;
+    background: #fff;
+    font-size: 0.8rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.mypage-date-wrap .mypage-date-check .mypage-date-box .mypage-first-date,
+.mypage-date-wrap .mypage-date-check .mypage-date-box .mypage-last-date {
+    width: 184px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 0 0 0 10px;
+    font-size: 0.8rem;
+}
+
+
+/* 주문목록 / 배송조회 */
+
+.mypage-order-wrap .mypage-order-list {
+    margin: 0 0 30px 0;
+    padding: 35px 0;
+    border: 1px solid #ccc;
+}
+
+.mypage-order-wrap .mypage-order {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mypage-order-wrap .mypage-item {
+    width: 15%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
+    position: relative;
+}
+
+.mypage-order-wrap .mypage-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #06ADC3;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.mypage-circle.active {
+    background-color: #005D75;
+    color: #fff;
+}
+
+.mypage-item p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.mypage-order-list .mypage-order-exchange {
+    width: 24%;
+    border-left: 1px solid #ccc;
+    padding: 0px 30px;
+}
+
+.mypage-order-list .mypage-order-exchange dl {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
+.mypage-order-list .mypage-order-exchange dl:nth-child(2) {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 쿠폰 영역 */
+.mypage-recent-wrap .mypage-recent-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mypage-recent-wrap .mypage-recent-title .mypage-recent-info {
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 7px 0;
+}
+
+.mypage-recent-wrap .mypage-recent-title .mypage-recent-info h3 {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.mypage-recent-wrap .mypage-recent-title .mypage-recent-info span {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.mypage-recent-wrap .order-table {
+    width: 100%;
+    margin-bottom: 35px;
+}
+
+.mypage-recent-wrap .order-table th {
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #f5f5f5;
+}
+
+.mypage-recent-wrap .order-table td {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 20px 0;
+    vertical-align: middle;
+}
+
+.order-table .order-info .order-prod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.order-table .order-info .order-prod .order-prod-option {
+    display: none;
+}
+
+.order-table .order-info .order-prod .order-prod-option strong,
+.order-table .order-info .order-prod .order-prod-option span,
+.order-table .order-info .order-prod .order-prod-option b {
+    text-align: left;
+}
+
+.order-table .table-header {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.order-table .order-info {
+    border-bottom: 1px solid #ccc;
+}
+
+.order-table .order-info .order-details ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.order-table .order-info .order-details ul li {
+    padding: 3px 0;
+    font-size: 0.8rem;
+}
+
+.order-table .order-info .order-details .order-date {
+    color: #ccc;
+}
+
+.order-table .order-info .order-details .order-cancel {
+    font-size: 0.8rem;
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.order-table .order-info .order-details .order-refund {
+    font-size: 0.8rem;
+    display: block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.order-table .order-info .order-details .order-red {
+    color: #8F364D;
+}
+
+.order-table .order-info .order-title {
+    padding: 0 5px;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.order-table .order-info .order-title:hover {
+    color: #005D75;
+    text-decoration: underline;
+}
+
+.order-table .order-info .order-price {
+    font-size: 0.8rem;
+}
+
+.order-table .order-info .order-price strong {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.order-table .order-info .order-review .order-review-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.order-table .order-info .order-review button {
+    width: 80px;
+    display: block;
+    background-color: #06ADC3;
+    color: #fff;
+    padding: 10px;
+}
+
+.order-table .order-info .order-review a:hover {
+    background-color: #005D75;
+}
+
+
+/* 기존 후기등록 버튼 스타일 */
+.order-review-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .order-review-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /*  */
+  .action-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #28a745; /* ✅ 녹색 버튼 */
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .action-button:hover {
+    background-color: #218838;
+  }
+  
+  .cancel-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #dc3545; /* ✅ 빨간색 버튼 */
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333;
+  }
+  /*  */
+
+.mypage-product-view-wrap .mypage-product-view-title .mypage-product-view-info {
+    display: flex;
+    align-items: baseline;
+    padding: 0 0 7px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.mypage-product-view-wrap .mypage-product-view-title .mypage-product-view-info h3 {
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+.mypage-product-view-wrap .mypage-product-view-title .mypage-product-view-info span {
+    font-size: 0.8rem;
+}
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+} 
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item {
+    width: calc(100% / 4);
+    padding: 10px 5px;
+}
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item img {
+    width: 100%;
+}
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item p {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 0;
+    line-height: 24px;
+}
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item .mypage-price-details .mypage-discounted-price {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -1px;
+    padding: 0 5px 0 0;
+}
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item .mypage-price-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+}
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item .mypage-price-container button {
+    border: 0;
+    background: 0;
+} 
+
+.mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item .mypage-price-container .fa-heart {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    color: #F294B2;
+}
+
+/* 마일리지 테이블 */
+.mileageWrap {
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .mileageWrap h3 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .mileageTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .mileageTable th,
+  .mileageTable td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+  
+  .mileageTable th {
+    background-color: #f2f2f2;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .mileageTable tr:hover {
+    background-color: #e0f3ff;
+  }
+  
+  .backButton {
+    padding: 10px 20px;
+    background-color: #06ADC3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .backButton:hover {
+    background-color: #005D75;
+  }
+
+@media screen and (max-width:1200px) {
+    .mypage-order-list {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mypage-order-list .mypage-order-order {
+        width: 100%;
+        border-right: 0;
+    }
+
+    .mypage-order-list .mypage-order-exchange {
+        width: 100%;
+        border-left: 0;
+        margin-top: 20px;
+        padding: 0 30px;
+    }
+
+    .mypage-order-list .mypage-order-exchange dl {
+        font-size: 0.8rem;
+    }
+
+    .mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item {
+        width: calc(100% / 3);
+    }
+
+    .mypage-date-wrap .mypage-date-check .mypage-date-period button {
+        display: none;
+    }
+
+    .order-table .order-info .order-prod {
+        padding: 33px 0;
+    }
+
+    .order-table .order-info .order-prod img {
+        width: 100%;
+    }
+
+    .order-table .order-info .order-prod .order-prod-area {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .order-table .order-info .order-prod .order-link .order-title {
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .mypage-order {
+        flex-direction: column;
+    }
+
+    .mypage-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin: 10px 0;
+    }
+
+    .mypage-item {
+        max-width: 150px;
+    }
+
+    .mypage-circle {
+        margin-bottom: 0;
+    }
+
+    .mypage-item p {
+        flex-grow: 1; /* 텍스트가 남은 공간을 차지하도록 함 */
+        text-align: left; /* 텍스트를 왼쪽 정렬 */
+    }
+
+    .mypage-order-list {
+        padding: 20px 0 20px 0;
+    }
+    
+    .mypage-order-list .mypage-order-order {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+    }
+    
+    .mypage-order-list .mypage-order-order .mypage-order-info {
+        padding: 0 10px 0 30px;
+    }
+    
+    .mypage-order-list .mypage-order-order .mypage-order-info b {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .mypage-order-list .mypage-order-order .mypage-order-info {
+        padding: 0 10px 0 30px;
+    }
+    
+    .order-table .order-info .order-prod .order-prod-option {
+        display: block;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+
+    .mypage-date-wrap .mypage-date-check {
+        flex-direction: column;
+    }
+
+    .mypage-date-wrap .mypage-date-check .mypage-date-period .mypage-period-btn {
+        display: none;
+    }
+
+    .mypage-date-wrap .mypage-date-check .mypage-date-search .mypage-date-search-btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .mypage-date-wrap .mypage-date-check .mypage-date-box .mypage-first-date, .mypage-date-wrap .mypage-date-check .mypage-date-box .mypage-last-date {
+        width: 100%;
+        position: relative;
+    }
+
+    .mypage-date-wrap .mypage-date-check .mypage-date-box input {
+        width: 100%;
+    }
+
+    .mypage-date-wrap .mypage-date-check .mypage-date-box {
+        width: 100%;
+    }
+
+    .order-table .order-info .order-prod .order-prod-option strong,
+    .order-table .order-info .order-prod .order-prod-option span,
+    .order-table .order-info .order-prod .order-prod-option b {
+        text-align: left;
+        display: block;
+    }
+
+    .mypage-recent-wrap .order-table colgroup col:nth-child(2) {
+        width: 40%;
+    }
+
+    .mypage-top-wrap {
+        border-bottom: 1px solid #ccc;
+        flex-direction: column;
+    }
+
+    .mypage-top-info {
+        width: 100%;
+    }
+
+    .mypage-top-wrap .mypage-top-wallet .mypage-top-wallet-wrap {
+        width: 100%;
+        flex-direction: wrap;
+    }
+
+    
+    .mypage-top-wrap .mypage-top-info {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .mypage-top-wrap .mypage-top-wallet {
+        width: 100%;
+    }
+
+    .mypage-recent-wrap .order-table colgroup col:nth-child(3),
+    .mypage-recent-wrap .order-table colgroup col:nth-child(4) {
+        display: none;
+    }
+
+    .mypage-recent-wrap .order-table .table-header .header-money,
+    .mypage-recent-wrap .order-table .table-header .header-order {
+        display: none;
+    }
+    
+    .mypage-recent-wrap .order-table .order-info .order-price,
+    .mypage-recent-wrap .order-table .order-info .order-deposit {
+        display: none;
+    }
+
+    .mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item {
+        width: calc(100% / 2);
+    }
+
+    
+}
+
+@media screen and (max-width:480px) {
+    .mypage-product-view-wrap .mypage-product .mypage-product-list .mypage-product-item {
+        width: 100%;
+    }
+
+    .mypage-order-wrap .mypage-item {
+        width: 25%;
+    }
+}

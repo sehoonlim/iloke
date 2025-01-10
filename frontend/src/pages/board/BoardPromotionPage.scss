@@ -1,0 +1,96 @@
+$background-color: #f4f4f4;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$status-color: #d9534f;
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 5px;
+
+  .image-center {
+    display: flex; /* Flexbox 사용 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+  }
+
+  .gallery-item {
+    background-color: #{$background-color}; // SCSS 변수 사용
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #{$shadow-color}; // SCSS 변수 사용
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+
+    .item-image {
+      width: 90%;
+      object-fit: cover;
+    }
+
+    .item-content {
+      h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #333;
+      }
+
+      p {
+        margin: 5px 0;
+        color: #666;
+      }
+
+      .status {
+        font-weight: bold;
+        color: #{$status-color}; // SCSS 변수 사용
+      }
+    }
+  }
+}
+
+.promotion-date-check {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+
+  .promotion-date-search {
+    .promotion-date-search-btn {
+      width: 100px;
+      padding: 7px 0;
+      display: block;
+      background-color: #06adc3;
+      color: #fff;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #005d75;
+      }
+
+      &::after {
+        content: "\f002";
+        font-family: FontAwesome;
+        font-size: 1rem;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        color: #fff;
+        margin: 0 5px;
+      }
+    }
+  }
+
+  .promotion-period-text {
+    font-size: 0.8rem;
+    margin-right: 10px;
+  }
+}
+
+.write-btn {
+  margin: 5px;
+}

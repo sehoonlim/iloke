@@ -1,0 +1,143 @@
+.findIdContainer {
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: white;
+    margin-top: 30px;
+  }
+  
+  /* 반응형 설정: 800px 이하 */
+  @media screen and (max-width: 800px) {
+    .findIdContainer {
+      width: 100%;
+      margin-top: 30px;
+      padding: 10px;
+    }
+  
+    .findIdTitle {
+      font-size: 1.5rem;
+    }
+
+    .findPwBtn, .loginBtn{
+      width : 100%
+    } 
+  }
+  
+  /* 반응형 설정: 480px 이하 */
+  @media screen and (max-width: 480px) {
+    .findIdContainer {
+      margin-top: 30px;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .findIdTitle {
+      font-size: 1.2rem;
+    }
+
+    .findPwBtn, .loginBtn{
+      width:100%
+    } 
+  }
+  
+  /* 타이틀 스타일 */
+  .findIdTitle {
+    text-align: center;
+    font-size: 29px;
+    font-weight: 500;
+    margin: 10px 0 15px;
+  }
+  
+  /* 메시지 섹션 스타일 */
+  .findMsgDiv {
+    text-align: center;
+    margin-bottom: 14px;
+  }
+  
+  .mypageI {
+    font-size: 113px;
+    margin: 23px 0;
+  }
+  
+  /* 입력 필드 스타일 */
+  .findIdInputDiv {
+    margin-bottom: 5px;
+  }
+  
+  .nameInput {
+    width: 100%; /* 이름 입력칸은 한 줄에 100% 크기로 */
+    padding: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .emailDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .emailInput {
+    width: 48%; /* 이메일 입력칸 너비 50% */
+    padding: 10px;
+  }
+  
+  .emailDomain {
+    width: 48%; /* 도메인 선택칸 너비 50% */
+    height: 39px;
+    margin-left: 2%; /* 두 입력칸 사이 간격 */
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  /* 아이디 찾기 버튼 스타일 */
+  .findBtnDiv {
+    margin-top: 10px;
+  }
+  
+  .findBtn {
+    background-color: #06adc3;
+    color: white;
+    width: 99%;
+    height: 45px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .findBtn:hover {
+    background-color: #005d75;
+  }
+  
+  /* 비밀번호 및 로그인 버튼 섹션 스타일 */
+  .pwLoginDiv {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #111111;
+    text-align: center;
+  }
+  
+  .pwLoginDiv button {
+    height: 45px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .findPwBtn {
+    border: 1px solid #cccccc;
+    background-color: white;
+  }
+  
+  .findPwBtn:hover {
+    font-weight: 500;
+  }
+  
+  .loginBtn {
+    background-color: #111111;
+    color: white;
+    border: none;
+  }
+  
+  .loginBtn:hover {
+    font-weight: 500;
+  }
+  

@@ -1,0 +1,30 @@
+.pro_detail table * {
+  cursor: default;
+}
+.pro_detail .join_base_section .hasRadio label:hover {
+  color: #111;
+}
+.pro_detail .join_base_section .hasRadio label.active {
+  color: #06adc3;
+}
+.pro_detail input[type="text"],
+.pro_detail input[type="file"],
+.pro_detail input[type="number"],
+.pro_detail textarea {
+  resize: none;
+  border: 1px solid #ccc;
+}
+
+.pro_detail input:focus,
+.pro_detail select:focus,
+.pro_detail textarea:focus {
+  cursor: default;
+  outline: none;
+}
+.pro_detail input[disabled],
+.pro_detail select[disabled],
+.pro_detail select[disabled] > option {
+  color: #111111 !important;
+}
+/* .proFrm input[type='text'],
+.proFrm input[type='number']{text-align: right;} */

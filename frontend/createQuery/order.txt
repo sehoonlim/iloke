@@ -1,0 +1,71 @@
+CREATE TABLE `order` (
+    order_id INT AUTO_INCREMENT PRIMARY KEY COMMENT '주문 번호',
+    member_id VARCHAR(50) NOT NULL COMMENT '회원 ID (FK)',
+    order_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '주문 일자',
+    pay_method ENUM('휴대폰', '신용카드') NOT NULL COMMENT '결제 수단',
+    mileage_used INT DEFAULT 0 COMMENT '사용 마일리지',
+    mileage_id INT COMMENT '마일리지 ID',
+    is_confirmed CHAR(1) DEFAULT 'N' COMMENT '구매 확정 여부 (Y/N)',
+    total_price INT NOT NULL COMMENT '총 금액',
+    receiver_name VARCHAR(50) NOT NULL COMMENT '수령자 이름' ,
+ receiver_phone VARCHAR(20) NOT NULL COMMENT '수령자 전화번호' ,
+ receiver_address VARCHAR(255) NOT NULL COMMENT '수령자 주소' ,
+    reg_id VARCHAR(50) NOT NULL COMMENT '작성자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성일시',
+    upt_id VARCHAR(50) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정일시'
+) COMMENT='주문 테이블';
+
+
+CREATE TABLE order_product (
+    order_product_id INT AUTO_INCREMENT PRIMARY KEY COMMENT '주문상품 ID',
+    order_id INT NOT NULL COMMENT '주문번호',
+    product_id VARCHAR(14) NOT NULL COMMENT '상품 ID',
+    quantity INT NOT NULL COMMENT '수량',
+    unit_price INT NOT NULL COMMENT '낱개 금액',
+    options JSON DEFAULT NULL COMMENT '상품 옵션 정보',
+    reg_id VARCHAR(50) NOT NULL COMMENT '작성자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성 일시',
+    upt_id VARCHAR(50) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
+) COMMENT = '주문 상품 테이블';
+
+
+CREATE TABLE cart (
+    cart_id INT AUTO_INCREMENT PRIMARY KEY COMMENT '장바구니 번호',
+    product_id VARCHAR(14) NOT NULL COMMENT '상품 번호',
+    member_id VARCHAR(50) NOT NULL COMMENT '회원 ID',
+    quantity INT NOT NULL COMMENT '상품 수량',
+    options JSON DEFAULT NULL COMMENT '상품 옵션 정보',
+    option_unit_price int NOT NULL DEFAULT 0 COMMENT '옵션 포함 개별 상품 가격',
+    reg_id VARCHAR(50) NOT NULL COMMENT '작성자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성 일시',
+    upt_id VARCHAR(50) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정 일시'
+) COMMENT='장바구니 테이블';
+
+
+CREATE TABLE deliveries (
+    delivery_id INT AUTO_INCREMENT PRIMARY KEY COMMENT '배송 번호',
+    order_id INT NOT NULL COMMENT '주문 번호(FK)',
+    member_id VARCHAR(50) NOT NULL COMMENT '회원 ID(FK)',
+    order_status ENUM(
+         '배송준비', 
+        '배송중', '배송완료', '취소요청', 
+        '취소완료', '반품요청', '반품완료'
+    ) DEFAULT '배송준비' COMMENT '주문 상태',
+    prep_date DATETIME DEFAULT NULL COMMENT '배송 준비 날짜',
+    start_date DATETIME DEFAULT NULL COMMENT '배송 시작 날짜',
+    done_date DATETIME DEFAULT NULL COMMENT '배송 완료 날짜',
+    cancel_req_date DATETIME DEFAULT NULL COMMENT '취소 요청 날짜',
+    cancel_done_date DATETIME DEFAULT NULL COMMENT '취소 완료 날짜',
+    return_req_date DATETIME DEFAULT NULL COMMENT '반품 요청 날짜',
+    return_done_date DATETIME DEFAULT NULL COMMENT '반품 완료 날짜',
+    req_reasons TEXT DEFAULT NULL COMMENT '요청 사유',
+    refuse_reasons TEXT DEFAULT NULL COMMENT '요청 거절 사유',
+    reg_id VARCHAR(50) NOT NULL COMMENT '작성자',
+    reg_date DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '작성일시',
+    upt_id VARCHAR(50) DEFAULT NULL COMMENT '수정자',
+    upt_date DATETIME DEFAULT NULL COMMENT '수정일시'
+) COMMENT='배송 정보 테이블'
+

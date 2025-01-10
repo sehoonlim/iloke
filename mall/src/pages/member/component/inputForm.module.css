@@ -1,0 +1,52 @@
+.inputField input {
+    /* width: 100%; */
+    /* padding: 10px; */
+    margin: 13px 0px 3px 0px;
+    width: 100%;
+    height: 45px;
+    padding-left: 10px;
+    /* border: 1px solid #cccccc; */
+    /* border-radius: 5px; */
+    /* box-sizing: border-box; */
+}
+
+.inputField p {
+    text-align: center;
+    font-size: 13px;
+    color: #929292;
+}
+
+.inputField a {
+    text-decoration: underline;
+}
+
+.inputBtnDiv {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.submitButton {
+    background-color: #06adc3;
+    color: white;
+    width: 29%;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.submitButton:hover {
+    background-color: #005D75;
+}
+
+@media screen and (max-width: 800px) {
+    .submitButton {
+        width: 98%;
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .submitButton {
+        width: 98%;
+    }
+}

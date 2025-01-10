@@ -1,0 +1,253 @@
+.modifySection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 20px;
+}
+
+.modifyWrap {
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* 제목 스타일 */
+.modifyWrap h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 섹션 구분선 */
+.sectionDivider {
+  border-top: 1px solid #cccccc;
+  margin: 20px 0;
+}
+
+/* 입력 폼 스타일 */
+.modifyForm > div > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.inputGroup p, .emailPhone {
+  width: 150px;
+  font-weight: bold;
+  margin: 0;
+  color: #555;
+}
+
+/* 입력 필드 스타일 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* 안내 문구 스타일 */
+.infoText {
+  width: 100%;
+  font-size: 0.9rem;
+  color: #f00;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+/* 체크박스 컨테이너 스타일 */
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* 닉네임 입력 필드와 메시지를 감싸는 컨테이너 */
+.nicknameWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.nicknameMessage {
+  font-size: 0.8em;
+  margin-top: 5px;
+  white-space: nowrap;
+}
+
+.nicknameMessage.error {
+  color: red;
+}
+
+.nicknameMessage.success {
+  color: green;
+}
+
+
+/* 이메일 입력 컨테이너 */
+.emailInput {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.emailInput input {
+  flex: 2;
+  padding: 7px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.emailInput select {
+  flex: 1;
+  padding: 7px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  height: 46px; /* 다른 input과 높이를 맞춤 */
+}
+
+/* 비밀번호 변경 버튼 스타일 */
+.btnToggle {
+  flex: 1;
+  padding: 12px;
+  background-color: #06adc3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btnToggle:hover {
+  background-color: #0595a6;
+}
+
+/* 버튼 박스 스타일 */
+.buttonBox {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+/* 취소 및 수정 버튼 스타일 */
+.btnCancel,
+.btnConfirm {
+  width: 160px;
+  height: 50px;
+  font-size: 1rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btnCancel {
+  background-color: #cccccc;
+}
+
+.btnCancel:hover {
+  background-color: #b3b3b3;
+}
+
+.btnConfirm {
+  background-color: #06adc3;
+}
+
+.btnConfirm:hover {
+  background-color: #0595a6;
+}
+
+/* 비밀번호 입력 컨테이너 */
+.pwInputWrapper {
+  display: flex;
+  flex-direction: column; /* 입력 필드와 메시지를 수직으로 배치 */
+  width: 100%;
+}
+
+.pwInputWrapper > p{
+  width: 100%;
+}
+
+.pwInput {
+  width: 100%; /* 입력 필드 가로 크기 */
+  padding: 7px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 5px; /* 메시지와 간격 */
+}
+
+/* 비밀번호 메시지 스타일 */
+.pwMsg, .pwMatchMsg, .emailMsg {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: red; /* 기본 에러 색상 */
+}
+
+.pwMsg.success, .pwMatchMsg.success, .emailMsg.success {
+  color: green; /* 성공 메시지 색상 */
+}
+
+.pwMsg.error, .pwMatchMsg.error, .emailMsg.error {
+  color: red; /* 에러 메시지 색상 */
+}
+
+ /* 800px 이하 반응형 */
+ @media screen and (max-width: 800px) {
+  .buttonBox {
+    gap: 10px;
+  }
+
+  .btnCancel,
+  .btnConfirm {
+    width: 50%;
+    margin: 0;
+  }
+}
+
+/* 480px 이하 반응형 */
+@media screen and (max-width: 480px) {
+  .emailInput {
+    flex-direction: column;
+  }
+
+  .emailInput select {
+    width: 100%;
+    flex: none;
+  }
+
+  .buttonBox {
+    flex-direction: column;
+  }
+
+  .btnCancel,
+  .btnConfirm {
+    width: 100%;
+    margin: 0;
+  }
+}

@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* 버튼 간 간격을 추가 */
+}
+
+.pagination-link {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007bff;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.pagination-link.active {
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+}
+
+.pagination-link:hover:not(.active) {
+  background-color: #f8f9fa; /* 버튼 호버 시 배경색 */
+  border-color: #007bff; /* 버튼 호버 시 테두리 색 */
+}
+
+.pagination-link:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  background-color: #e9ecef; /* 비활성화된 버튼 배경색 */
+}

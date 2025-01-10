@@ -1,0 +1,296 @@
+.memberPage {
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s ease; /* 부드러운 전환 효과 추가 */
+}
+
+/* 회원 검색 필터 */
+.filterBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding: 15px; /* 내부 여백 추가 */
+  border: 1px solid #ccc; /* 테두리 추가 */
+  background-color: #f9f9f9; /* 배경색 추가 */
+}
+
+/* 필터 행 */
+.filterRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 */
+}
+
+/* 필터 항목 */
+.filterItem {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* 텍스트와 입력 필드 간 간격 */
+  font-size: 0.9rem;
+  white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+}
+
+.filterItem input,
+.filterItem select {
+  flex: 1; /* 입력 필드가 한 줄에 꽉 차도록 설정 */
+  min-width: 100px; /* 최소 너비 설정 */
+  padding: 5px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* 버튼 영역 */
+.filterButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.filterBtn {
+  padding: 8px 15px;
+  background-color: #06adc3;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filterBtn:hover {
+  background-color: #005d75;
+}
+
+/* 회원 목록 영역 */
+.memberList {
+  width: 100%; /* 기본 너비 */
+  /* max-width: 1200px; */
+  min-height: 500px;
+  background: #fff;
+  transition: width 0.3s ease; /* 너비 전환 효과 */
+}
+
+.memberList.shrinked {
+  width: 60%; /* 상세 정보가 표시될 때 목록 너비 축소 */
+}
+
+
+/* 헤더 스타일 */
+.header {
+  display: flex;
+  align-items: center;
+  background: #fbfbfb;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 0;
+}
+
+.headercell {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+}
+
+/* 회원 데이터 행 */
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.datarow {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+.datarow:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.datarow:nth-child(even) {
+  background: #ffffff;
+}
+
+.datacell {
+  flex: 1;
+  text-align: center;
+  color: #555;
+}
+
+.datacell a {
+  color: #06adc3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.datacell a:hover {
+  color: #005d75;
+  text-decoration: underline;
+}
+
+/* 회원등록 버튼 */
+.memberList .join-link {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #06adc3;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.memberList .join-link:hover {
+  background-color: #005d75;
+}
+
+/* 상세 정보 영역 */
+.memberDetail {
+  width: 0; /* 기본적으로 보이지 않음 */
+  overflow: hidden; /* 초기 상태에서 영역 숨김 */
+  background: #fff;
+  padding: 20px;
+  transition: width 0.3s ease; /* 너비 전환 효과 */
+}
+
+.memberDetail.visible {
+  width: 70%; /* 상세 정보가 표시될 때 너비 설정 */
+}
+
+/* 페이지 네이션 */
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px 0;
+  gap: 5px; /* 버튼 간격 추가 */
+}
+
+.pagination-link {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007bff;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.pagination-link.active {
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+}
+
+.pagination-link:hover:not(.active) {
+  background-color: #f8f9fa;
+  border-color: #007bff;
+}
+
+.pagination-link:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  background-color: #e9ecef;
+}
+
+/* 회원 등록 버튼 */
+
+.postButtons {
+  display: flex;
+  justify-content: flex-end; /* 버튼을 오른쪽으로 정렬 */
+  margin-top: 10px; /* 상단 여백 추가 */
+}
+
+.button-primary {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #06adc3;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  transition:
+    background-color 0.3s,
+    border-color 0.3s;
+}
+
+.button-primary:hover {
+  background-color: #005d75; /* 버튼 호버 시 어두운 파란색 */
+  border-color: #005d75; /* 테두리 색 변경 */
+}
+
+.button-primary:active {
+  background-color: #003f7f; /* 클릭 시 더 어두운 파란색 */
+  border-color: #003f7f;
+}
+
+.button-primary:disabled {
+  background-color: #e9ecef; /* 비활성화된 버튼 배경색 */
+  color: #6c757d; /* 비활성화된 버튼 텍스트 색 */
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 1200px) {
+  .headercell,
+  .datacell {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headercell:nth-child(4),
+  .headercell:nth-child(5),
+  .datacell:nth-child(4),
+  .datacell:nth-child(5) {
+    display: none;
+  }
+
+  .headercell,
+  .datacell {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .headercell:nth-child(3),
+  .datacell:nth-child(3) {
+    text-align: left;
+  }
+
+  .headercell:nth-child(1),
+  .datacell:nth-child(1) {
+    display: none;
+  }
+
+  .datarow {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .filterRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterButtons {
+    justify-content: flex-start;
+  }
+}

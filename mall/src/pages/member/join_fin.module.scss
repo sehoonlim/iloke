@@ -1,0 +1,144 @@
+.finContainer {
+  background-color: #fff;
+  width: 600px;
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  
+
+  .finHeader {
+    h2 {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .finTabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .finTab {
+      padding: 10px 20px;
+      border: 1px solid #dddddd;
+      width: 33%;
+      text-align: center;
+      background-color: #f7f7f7;
+
+      &.active {
+        background-color: #005D75;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .finStatusIcon {
+    margin: 30px 0;
+    font-size: 50px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .finMainText {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .finSubText {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+
+  .finButtons {
+    justify-content: center;
+    gap: 10px;
+
+    button {
+      padding: 12px 30px;
+      cursor: pointer;
+      width: 150px;
+    }
+
+    .finHome {
+      border: 1px solid #cccccc;
+      background-color: #ffffff;
+      color: #000;
+
+      &:hover {
+        border: 1px solid #cccccc;
+        background-color: #ffffff;
+        font-weight: 500;
+      }
+    }
+
+    .finLogin {
+      background-color: #06adc3;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #005D75;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+/* 800px 이하 반응형 */
+@media screen and (max-width: 800px) {
+  .finContainer {
+    width: 100%;
+    margin-top: 20px;
+
+    .finHeader h2 {
+      font-size: 25px;
+    }
+
+    .finMainText {
+      font-size: 1.1rem;
+    }
+
+    .finButtons button {
+      width: 99%;
+    }
+  }
+}
+
+/* 480px 이하 반응형 */
+@media screen and (max-width: 480px) {
+  .finContainer {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+
+    .finHeader h2 {
+      font-size: 25px;
+    }
+
+    .finTabs .finTab {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+    }
+
+    .finStatusIcon {
+      font-size: 40px;
+    }
+
+    .finMainText {
+      font-size: 1.1rem;
+    }
+
+    .finSubText {
+      font-size: 0.9rem;
+    }
+
+    .finButtons button {
+      width: 98%;
+      padding: 10px 15px;
+      font-size: 0.9rem;
+    }
+  }
+}

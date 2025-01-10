@@ -1,0 +1,11 @@
+.custom-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;  /* 비율유지하는거 */
+    margin: 5px; /* 간격 */
+}
+
+.content-head{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
