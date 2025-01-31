@@ -3,6 +3,7 @@ import "./MyPage.css";
 import { rFetchOrderCounts, rFetchUserOrders, rFetchMemberUserInfo, uConfirmPurchase, uRequestCancelOrReturn, rFetchMileageHistory } from '../../services/api';
 
 const MyPage = () => {
+  
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [recentOrders, setRecentOrders] = useState([]);
@@ -56,6 +57,7 @@ useEffect(() => {
 //  주문 목록 가져오기 (페이징 추가)
 
 const fetchOrders = async () => {
+  
   try {
     const params = {
       page: currentPage,
@@ -640,7 +642,7 @@ if (isLoading) {
 
 
  {/* 🔥 페이지 네이션 */}
- <div className="pagination">
+    <div className="pagination">
               <button 
                 onClick={handlePrevPage} 
                 disabled={currentPage === 1}

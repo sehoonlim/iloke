@@ -45,6 +45,7 @@ export function useContent() {
             setContent(<Home />);
         } else if (path === "/goods/myPage") {
             setContent(<MyPage />);
+            //setContent(<div >dfwfefwfe</div>);
         } else if (path === "/cart") {
             setContent(<Cart />);
         } else if (path === "/order") {

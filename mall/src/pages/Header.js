@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // 공통 css, js
 import '../css/reset.css';
@@ -14,7 +14,6 @@ import 'swiper/css/free-mode';
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem('userName') || !!sessionStorage.getItem('nickname'));
   const [username, setUsername] = useState(sessionStorage.getItem('userName') || sessionStorage.getItem('nickname') || '');
-  const navigate = useNavigate();
 
   // storage 이벤트를 감지해 로그인 상태 업데이트
   useEffect(() => {
@@ -41,10 +40,8 @@ function Header() {
     window.dispatchEvent(new Event('storage'));
 
     alert('로그아웃 되었습니다.');
-    //navigate('/'); // 메인 페이지로 이동
     window.location.href = '/';
   };
-  // console.log(process.env.REACT_APP_BACK_URL)
 
   return (
     <header className="on">
@@ -73,23 +70,10 @@ function Header() {
         </ul>
         <div className="gnb-wrap">
           <Link to="/" className="header-logo">
-          {/* 이미지 경로 재설정해야함 */}
-          <img src={`http://localhost:5500/content/img/main/logo.png`} alt="ILOKE logo" />
-            {/* <img src="./content/img/main/logo.png" alt="ILOKE logo" /> */}
+            <img src={`http://localhost:5500/content/img/main/logo.png`} alt="ILOKE logo" />
           </Link>
           <div className="gnb">
             <ul>
-              {/* <li>
-                <Link to="/brand/intro">브랜드</Link>
-                <ol>
-                  <li>
-                    <Link to="/brand/intro">브랜드 소개</Link>
-                  </li>
-                  <li>
-                    <Link to="/brand/showRoomInfo">쇼룸 안내</Link>
-                  </li>
-                </ol>
-              </li> */}
               <li>
                 <Link to="/goods/goodsList">전체상품</Link>
                 <ol>
@@ -113,17 +97,6 @@ function Header() {
                   </li>
                 </ol>
               </li>
-              {/* <li>
-                <Link to="/promotion/online_mall">프로모션</Link>
-                <ol>
-                  <li>
-                    <Link to="/promotion/online_mall">온라인 공식몰</Link>
-                  </li>
-                  <li>
-                    <Link to="/promotion/offline_showroom">오프라인 쇼룸</Link>
-                  </li>
-                </ol>
-              </li> */}
               <li>
                 <Link to="/notice/customer_review">고객후기</Link>
                 <ol>
@@ -159,11 +132,6 @@ function Header() {
           </div>
           <div className="gnb-side">
             <ul>
-              <li>
-                {/* <Link to="/search" className="nav-search">
-                  <i className="fa-solid fa-magnifying-glass"></i>
-                </Link> */}
-              </li>
               <li className="shop">
                 <Link to="/cart">
                   <i className="fa-solid fa-cart-shopping"></i>
@@ -171,7 +139,14 @@ function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="/goods/myPage" className="nav-user">
+                {/* ✅ 기존 <Link> 유지하며 replace 속성 추가 */}
+                <Link to="/goods/myPage"  >
+                {/* 
+                 로딩이 덜컹거리거나 insertbefore,removechild 오류의 원인
+                <Link to="/goods/myPage" className="nav-user" >
+                소거법 형식으로 오류잡는 모습이 인상적
+                */}
+
                   <i className="fa-solid fa-user-large"></i>
                 </Link>
               </li>
