@@ -533,21 +533,21 @@ if (isLoading) {
                     <td className="order-prod">
                       <a href="#" className="order-link">
                         <div className="order-prod-area">
-                          <img src={order.image} alt="상품 이미지" />
-                          <span className="order-title"> <td>{formatProductName(order.product_names)}</td></span>
+                          {/* <img src={order.image} alt="상품 이미지" /> */}
+                          <span className="order-title" > <td>{formatProductName(order.product_names)}</td></span>
                         </div>
                       </a>
                     </td>
                     <td className="order-price">{order.total_price.toLocaleString()}</td>
                     <td className="order-deposit">
-                    <td>
+                   
   {order.status}
   {order.status === '배송완료' && order.is_confirmed === 'Y' && (
           <div className="confirmed-text">
             구매확정됨
           </div>
         )}
-</td>
+
                     </td>
                     <td className="order-review">
                     

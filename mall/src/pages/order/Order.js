@@ -198,29 +198,27 @@ useEffect(() => {
 
   const handleOrderValidation = (e) => {
     e.preventDefault(); // 기본 동작 막기 (폼 제출이나 새로고침 방지)
-  
+
     // 유효성 검사
-    
     if (!/^[가-힣a-zA-Z]{2,5}$/.test(formData.recipientName)) {
-      return alert("수취인 이름은 2~5자의 한글 또는 영문만 입력할 수 있습니다.");
+        return alert("수취인 이름은 2~5자의 한글 또는 영문만 입력할 수 있습니다.");
     }
-    if (!/^[가-힣a-zA-Z]{3,50}$/.test(formData.recipientAddress)) {
-      return alert("수취인 주소는 3~50자의 한글 또는 영문만 입력할 수 있습니다.");
+    if (!/^[가-힣a-zA-Z0-9\s\-]{3,50}$/.test(formData.recipientAddress)) {
+        return alert("수취인 주소는 3~50자의 한글, 영문, 숫자, 공백, '-' 만 입력할 수 있습니다.");
     }
     if (!/^(\d{3}-\d{4}-\d{4}|\d{2}-\d{3}-\d{4}|\d{2}-\d{4}-\d{4})$/.test(formData.recipientPhone)) {
-      return alert("전화번호는 xxx-xxxx-xxxx 형식이어야 합니다.");
+        return alert("전화번호는 xxx-xxxx-xxxx 형식이어야 합니다.");
     }
     if (!/^\d{3}-\d{4}-\d{4}$/.test(formData.recipientMobile)) {
-      return alert("휴대폰 번호는 xxx-xxxx-xxxx 형식이어야 합니다.");
+        return alert("휴대폰 번호는 xxx-xxxx-xxxx 형식이어야 합니다.");
     }
     if (!formData.agree) {
-      return alert("이용 약관에 동의해주세요.");
+        return alert("이용 약관에 동의해주세요.");
     }
-  
+
     // 유효성 검사 통과 시 제출
     handleSubmit(e); // e를 handleSubmit에 전달
-  };
-
+};
 
   return (
     <div className={styles.content_jh}>

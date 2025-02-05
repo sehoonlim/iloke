@@ -19,7 +19,7 @@
     margin-bottom: 20px;
 }
 
-table th {
+.write_table th {
     border-bottom: 1px solid #ccc;
     background: #F5F5F5;
     color: #111111;
@@ -30,7 +30,7 @@ table th {
     /* justify-content: center; */
 }
 
-table td {
+.write_table td {
     min-height: 32px;
     margin: 0;
     padding: 10px 10px 7px 10px;
@@ -38,37 +38,37 @@ table td {
     font-size: 1rem;
 }
 
-table th:nth-child(1) {
+.write_table th:nth-child(1) {
     border-top: 1px solid #ccc;
     padding-left: 20px;
     padding-top: 8px;
 }
 
-table th:nth-child(2) {
+.write_table th:nth-child(2) {
     height: 50px;
     padding-left: 20px;
     padding-top: 8px;
 }
 
-table th:nth-child(3) {
+.write_table th:nth-child(3) {
     padding-left: 20px;
 }
 
 
-table th:nth-of-type(4) {
+.write_table th:nth-of-type(4) {
     padding-left: 20px;
 }
 
-table th:nth-of-type(5) {
+.write_table th:nth-of-type(5) {
     height: 50px;
     padding-left: 8px;
 }
 
-table td:nth-of-type(1) {
+.write_table td:nth-of-type(1) {
     border-top: 1px solid #ccc;
 }
 
-table td>input {
+.write_table td>input {
     border-color: #ccc;
 }
 
@@ -201,13 +201,13 @@ input::placeholder {
 }
 
 @media (max-width: 800px) {
-    table th, table td {
+    .write_table th, .write_table td {
         font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
-    table th, table td {
+    .write_table th, .write_table td {
         font-size: 0.8rem;
     }
 
