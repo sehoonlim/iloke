@@ -51,18 +51,22 @@ function Header() {
             {isLoggedIn ? (
               <span id="welcomeMessage">{username}님, 환영합니다.</span>
             ) : (
-              <Link to="/joinMethod" id="join">
+              <Link to="/joinMethod" >
+                {/* id="join" */}
                 회원가입
               </Link>
             )}
           </li>
           <li>
             {isLoggedIn ? (
-              <Link to="#" id="logout" onClick={handleLogout}>
+              <Link to="#"  onClick={handleLogout}>
+                {/* id="logout" */}
                 로그아웃
               </Link>
             ) : (
-              <Link to="/login" id="loginYn">
+              <Link to="/login"  
+              // id="loginYn"
+>
                 로그인
               </Link>
             )}

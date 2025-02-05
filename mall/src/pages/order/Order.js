@@ -476,7 +476,7 @@ useEffect(() => {
                 onClick={() => setShowModal(true)} // 모달 열기
                 className={styles.select_button}
               >
-                주소 선택
+                지점 선택
               </button>
                {/* 모달창! */}
             <tr>
