@@ -12,22 +12,33 @@ import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
 function Header() {
-  const [isLoggedIn, setIsLoggedIn] = useState(!!sessionStorage.getItem('userName') || !!sessionStorage.getItem('nickname'));
-  const [username, setUsername] = useState(sessionStorage.getItem('userName') || sessionStorage.getItem('nickname') || '');
-
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    !!sessionStorage.getItem("userName") || !!sessionStorage.getItem("nickname")
+  );
+  const [username, setUsername] = useState(
+    sessionStorage.getItem("userName") || sessionStorage.getItem("nickname") || ""
+  );
+  const [cartItemCount, setCartItemCount] = useState(
+    parseInt(sessionStorage.getItem("cartItemCount")) || 0
+  );
   // storage 이벤트를 감지해 로그인 상태 업데이트
   useEffect(() => {
     const handleStorageChange = () => {
-      const storedUserName = sessionStorage.getItem('userName');
-      const storedNickname = sessionStorage.getItem('nickname');
+      // ✅ 로그인 정보 업데이트
+      const storedUserName = sessionStorage.getItem("userName");
+      const storedNickname = sessionStorage.getItem("nickname");
       setIsLoggedIn(!!storedUserName || !!storedNickname);
-      setUsername(storedUserName || storedNickname || '');
+      setUsername(storedUserName || storedNickname || "");
+  
+      // ✅ 장바구니 개수 업데이트 (즉시 반영)
+    const cartCount = parseInt(sessionStorage.getItem("cartItemCount") || "0", 10);
+    setCartItemCount(cartCount);
     };
-
-    window.addEventListener('storage', handleStorageChange);
-
+  
+    window.addEventListener("storage", handleStorageChange);
+  
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener("storage", handleStorageChange);
     };
   }, []);
 
@@ -139,7 +150,7 @@ function Header() {
               <li className="shop">
                 <Link to="/cart">
                   <i className="fa-solid fa-cart-shopping"></i>
-                  <span>0</span>
+                  <span>{cartItemCount}</span>
                 </Link>
               </li>
               <li>

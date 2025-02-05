@@ -23,38 +23,30 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [isAllChecked, setIsAllChecked] = useState(true);
-
+  const [cartItemCount, setCartItemCount] = useState(0); // ✅ 장바구니 개수 상태 추가
+  
   useEffect(() => {
     const fetchCartItems = async () => {
-  
       try {
         const response = await rFetchCartItems(userId);
         if (response.status !== 200) throw new Error("HTTP 상태 코드: " + response.status);
         const data = response.data;
-        // console.log("백 다녀옴",data);
-        
+  
         if (!data || !data.cartItems) throw new Error("cartItems가 비어있습니다.");
   
-        // 장바구니 데이터를 상태에 저장
         setCartItems(data.cartItems.map((item) => ({ ...item, checked: true })));
   
-        //  디버깅 코드 추가 
-        data.cartItems.forEach((item, index) => {
-          console.log(`📦 장바구니 아이템 ${index + 1} 데이터:`, item);
-          console.log(`🛠️ 옵션 데이터 JSON.stringify:`, JSON.stringify(item.options, null, 2)); // 방법 1
-          console.dir(item.options, { depth: null }); // 방법 2
-          if (item.options) {
-            item.options.forEach((option, idx) => {
-              console.log(`📝 옵션 ${idx + 1}:`, option); // 방법 3
-            });
-          } else {
-            console.log(' 옵션 데이터가 존재하지 않습니다.');
-          }
-        });
-        //  디버깅 코드 끝 
+        // ✅ 장바구니 개수 즉시 업데이트
+        const itemCount = data.cartItems.length;
+        sessionStorage.setItem("cartItemCount", itemCount.toString());
+        setCartItemCount(itemCount); // 🟢 상태 즉시 반영
   
+        // ✅ storage 이벤트 발생
+        window.dispatchEvent(new Event("storage"));
+  
+        console.log(`🛒 장바구니 개수 업데이트: ${itemCount}`); // ✅ 디버깅 로그 추가
       } catch (error) {
-        console.error(" 데이터를 가져오는 중 오류 발생:", error);
+        console.error("🛒 데이터를 가져오는 중 오류 발생:", error);
       }
     };
   
@@ -90,26 +82,33 @@ const Cart = () => {
 
   const handleDeleteSelected = async () => {
     const selectedItems = cartItems.filter((item) => item.checked);
-    const selectedCount = selectedItems.length;
-  
-    if (selectedCount === 0) {
+    if (selectedItems.length === 0) {
       alert("삭제할 상품을 선택해주세요.");
       return;
     }
   
     const confirmDelete = window.confirm(
-      `선택하신 ${selectedCount}개 상품을 장바구니에서 삭제하시겠습니까?`
+      `선택하신 ${selectedItems.length}개 상품을 장바구니에서 삭제하시겠습니까?`
     );
   
     if (confirmDelete) {
       try {
-        // 서버에 선택한 상품들 삭제 요청
-        await Promise.all(
-          selectedItems.map((item) => dDeleteCartItem(item.cart_id))
-        );
+        // ✅ 서버에 선택한 상품들 삭제 요청
+        await Promise.all(selectedItems.map((item) => dDeleteCartItem(item.cart_id)));
   
-        // 클라이언트 상태 업데이트
-        setCartItems((prevItems) => prevItems.filter((item) => !item.checked));
+        // ✅ 삭제 후 남은 장바구니 목록 업데이트
+        const updatedCartItems = cartItems.filter((item) => !item.checked);
+        setCartItems(updatedCartItems); // 🟢 상태 업데이트
+  
+        // ✅ 장바구니 개수를 즉시 업데이트
+        const newCartCount = updatedCartItems.length;
+        sessionStorage.setItem("cartItemCount", newCartCount.toString());
+        setCartItemCount(newCartCount); // 🟢 상태 즉시 반영
+  
+        // ✅ storage 이벤트 발생 (Header.js에서 감지 가능)
+        window.dispatchEvent(new Event("storage"));
+  
+        console.log(`🛒 장바구니에서 삭제됨, 남은 개수: ${newCartCount}`); // ✅ 디버깅 로그
       } catch (error) {
         console.error("장바구니 항목 삭제 중 오류 발생:", error);
         alert("삭제 중 오류가 발생했습니다.");
@@ -213,11 +212,11 @@ const Cart = () => {
                     />
                   </td>
                   <td className={styles.name_td}>
-                  <img 
+                  {/* <img 
   src={`/content/img/main/main_product${String(item.product_id).padStart(2, '0')}.jpg`} 
   alt={item.product_name} 
   style={{ width: "40px", height: "32px" }} 
-/>
+/> */}
                     {item.product_name}
 
                    {/*  옵션 추가 부분 */}

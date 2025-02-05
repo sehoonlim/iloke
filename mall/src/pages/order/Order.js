@@ -170,11 +170,15 @@ useEffect(() => {
     })),
   };
   
-    console.log('📦 전송 데이터 확인 (requestData):', JSON.stringify(requestData, null, 2));
+    
   
     try {
 
-      // console.log("requestData : ", requestData);
+       // ✅ 장바구니 비우기
+      setCarts([]); // 상태 업데이트
+      sessionStorage.setItem("cartItemCount", "0"); // ✅ 장바구니 개수를 0으로 설정
+      window.dispatchEvent(new Event("storage")); // ✅ storage 이벤트 발생 (Header에서 감지)
+
         
       const { data } = await uSubmitOrder(requestData); 
       if (data.success) {

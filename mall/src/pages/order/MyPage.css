@@ -5,6 +5,10 @@
 
 /* 구매확정됨 문구 표시 */
 
+.order-link{
+    text-decoration: none;
+}
+
 .confirmed-text {
     color: green;
     font-weight: bold;
