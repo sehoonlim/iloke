@@ -91,8 +91,9 @@ export function useContent() {
         //         else if (path === "/goods/goodsList/goodsDetail") {
         //             setContent(<GoodsDetail />);
         // } 
+        // else if (path === "/notice/customer_review") {   // 전체후기
+        // } 
         else if (path === "/notice/customer_review") {   // 전체후기
-        } else if (path === "/notice/customer_review") {   // 전체후기
             setContent(<CustomerReview />);
         } else if (path === "/notice/photoReview") {   // 포토후기
             setContent(<PhotoReview />);
