@@ -561,7 +561,7 @@ if (isLoading) {
 )}
   {order.status === '배송완료' && order.is_confirmed === 'N' && (
     <>
-      <div className="button-group1">
+      {/* <div className="button-group1"> */}
   <button 
     className="action-button" 
     onClick={() => handleConfirmPurchase(order)}
@@ -574,7 +574,7 @@ if (isLoading) {
   >
     반품요청
   </button>
-</div>
+{/* </div> */}
 
     </>
   )}

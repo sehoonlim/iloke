@@ -203,6 +203,17 @@ useEffect(() => {
   const handleOrderValidation = (e) => {
     e.preventDefault(); // 기본 동작 막기 (폼 제출이나 새로고침 방지)
 
+     // 최신 상태에서 마일리지를 숫자로 변환하고 계산
+     const mileageUsed = Number(formData.mileage) || 0;
+     const currentFinalPaymentAmount = Math.max(sumOfPrice - mileageUsed, 0);
+ 
+     if (currentFinalPaymentAmount <= 0) {
+         return alert("결제 금액이 0원 이하입니다. 마일리지를 조정해주세요.");
+     }
+ 
+     console.log("최종 결제 금액 확인:", currentFinalPaymentAmount);
+     console.log("사용한 마일리지 확인:", mileageUsed);
+
     // 유효성 검사
     if (!/^[가-힣a-zA-Z]{2,5}$/.test(formData.recipientName)) {
         return alert("수취인 이름은 2~5자의 한글 또는 영문만 입력할 수 있습니다.");

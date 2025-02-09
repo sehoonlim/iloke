@@ -21,7 +21,8 @@
 
 
 .button-group1 {
-    display: flex;        /* 가로 정렬 */
+    /* display: flex;    */
+         /* 가로 정렬 */
     gap: 10px;            /* 버튼 간격 */
   }
   
@@ -625,10 +626,14 @@
 
 .order-table .order-info .order-review button {
     width: 80px;
-    display: block;
+    /* display: block; */
     background-color: #06ADC3;
     color: #fff;
     padding: 10px;
+}
+
+.order-review {
+    width: 200px;
 }
 
 .order-table .order-info .order-review a:hover {
