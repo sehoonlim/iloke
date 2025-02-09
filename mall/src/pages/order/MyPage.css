@@ -25,6 +25,12 @@
          /* 가로 정렬 */
     gap: 10px;            /* 버튼 간격 */
   }
+
+  .button-group2 {
+     display: flex;    
+         /* 가로 정렬 */
+    gap: 10px;            /* 버튼 간격 */
+  }
   
   .action-button {
     padding: 10px 20px;   /* 버튼 내부 여백 */

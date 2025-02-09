@@ -492,7 +492,7 @@ if (isLoading) {
               </div>
               <div className="mypage-date-search">
                 
-              <div className="button-group1">
+              <div className="button-group2">
   <button
     className="mypage-date-search-btn"
     onClick={handleDateSearch}
