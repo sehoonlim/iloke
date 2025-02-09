@@ -177,14 +177,24 @@ function ItemInquery(props) {
             />
 
             <div>
-                <button type="button" className={styles.write_btn} onClick={() => {
-                    navigate(`/notice/itemWrite`, {
-                        state: { code: selectedCode, previousPage: '/notice/itemInquery'}
-                    });
-                }}>글쓰기</button>
+            <button type="button" className={styles.write_btn} onClick={() => {
+    const memberId = sessionStorage.getItem('userId') || sessionStorage.getItem('kakaoId');
+    
+    if (!memberId) {
+        alert('로그인이 필요합니다.');
+        navigate('/login'); // 로그인 페이지로 이동
+    } else {
+        navigate(`/notice/itemWrite`, {
+            state: { code: selectedCode, previousPage: '/notice/itemInquery'}
+        });
+    }
+}}>
+    글쓰기
+</button>
             </div>
         </div>
     );
 }
 
 export default ItemInquery;
+

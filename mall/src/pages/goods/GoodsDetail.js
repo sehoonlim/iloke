@@ -97,13 +97,28 @@ function GoodsDetail({id}) {
     let fnPriceNum = fnPrice.toLocaleString();//최종가 1000단위마다 쉼표
     let disVTxt = disV + '%';//할인율에 퍼센트 붙이기
 
-    //할인율 있을때 적용하는 기능
-    let disVCon = <b className={styles.price_percent}>{disVTxt}</b>;//있을때 - 할인율
-    let priceVCon = <span className={styles.price_origin}>{goodsInfo.price}원</span>
-    if(disV==0 || !disV){
-        disVCon = null;//없을때
-        priceVCon = null;
-    }
+    // 할인율 값 콘솔 출력
+console.log("✅ 할인율(disV) 값:", disV, "타입:", typeof disV);
+
+const discountRate = Number(disV); // 숫자로 변환하여 비교 수행
+
+// 변환된 값도 확인
+console.log("🎯 변환된 할인율 값 (discountRate):", discountRate, "타입:", typeof discountRate);
+
+let disVCon = <b className={styles.price_percent}>{disVTxt}</b>; // 할인율 표시
+let priceVCon = <span className={styles.price_origin}>{goodsInfo.price}원</span>; // 원가 표시
+
+// 할인율이 0이거나 없으면 원가와 할인율을 숨김
+if (discountRate <= 0 || isNaN(discountRate)) {
+    console.log("❌ 할인율이 없거나 0이므로 원가와 할인율을 숨깁니다.");
+    disVCon = null;
+    priceVCon = null;
+} else {
+    console.log("✅ 할인율 적용! 원가와 할인율 표시");
+}
+
+console.log("🔹 최종적으로 priceVCon 값:", priceVCon);
+console.log("🔹 최종적으로 disVCon 값:", disVCon);
 
 
      /////////// 옵션 데이터 넣기
@@ -208,6 +223,7 @@ function GoodsDetail({id}) {
         memberId, 
         productId, 
         quantity: option.quantity,
+        original_price: originalPrice,  // 추가: 원가(할인 전 가격)
         price: option.price,  //옵션 추가금 포함된 가격
         final_price: option.price,
         options: {

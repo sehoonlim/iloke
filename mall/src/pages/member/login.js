@@ -119,8 +119,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const response = await memLogin(id, pw);
-
-      if (response.data.success) {
+  
+      if (response.data && response.data.success) {
+        // 로그인 성공
         const userName = response.data.user.name;
         sessionStorage.setItem('userId', id);
         sessionStorage.setItem('userName', userName);
@@ -130,13 +131,33 @@ const Login = () => {
         alert(`${userName}님, 환영합니다!`);
         navigate('/home');
       } else {
-        alert(response.data.message || '로그인에 실패했습니다.');
+        // 서버에서 온 응답을 정상적으로 처리
+        if (response.data.code === 'INVALID_CREDENTIALS') {
+          alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+        } else if (response.data.code === 'DEACTIVATED_ACCOUNT') {
+          alert('탈퇴한 계정입니다. 다시 가입하시거나 관리자에게 문의하세요.');
+        } else {
+          alert(response.data.message || '로그인에 실패했습니다.');
+        }
       }
     } catch (error) {
-      alert('로그인 중 오류가 발생했습니다.');
+      // 네트워크 오류 또는 서버에서 응답이 없을 때만 catch 블록으로 빠짐
+      if (error.response && error.response.data) {
+        if (error.response.data.code === 'INVALID_CREDENTIALS') {
+          alert('아이디 또는 비밀번호가 올바르지 않습니다.');
+        } else if (error.response.data.code === 'DEACTIVATED_ACCOUNT') {
+          alert('탈퇴한 계정입니다. 다시 가입하시거나 관리자에게 문의하세요.');
+        } else {
+          alert(error.response.data.message || '로그인에 실패했습니다.');
+        }
+      } else {
+        alert('서버 연결에 문제가 있습니다. 인터넷 상태를 확인하거나 잠시 후 다시 시도해주세요.');
+      }
+      console.error('로그인 오류:', error.response?.data || error.message);
     }
   };
 
+  
   return (
     <section className={styles.loginSection}>
       <div className={styles.loginContainer}>
