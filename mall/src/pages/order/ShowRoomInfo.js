@@ -40,7 +40,7 @@ const ShowRoomInfo = ({ onSelectShowroom, mode = 'page' }) => { // 기본 모드
 
   const fetchShowrooms = async (kakaoMap) => {
     try {
-      const response = await axios.get('http://localhost:5000/api/showrooms');
+      const response = await axios.get('https://port-0-iloke-m746cjpj8dde2ebf.sel4.cloudtype.app/api/showrooms');
       const { showrooms } = response.data;
       setAllShowrooms(showrooms);
       setFilteredShowrooms(showrooms);
