@@ -11,6 +11,8 @@ import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 
+const bkURL =  process.env.REACT_APP_BACK_URL;
+
 function Header() {
   const [isLoggedIn, setIsLoggedIn] = useState(
     !!sessionStorage.getItem("userName") || !!sessionStorage.getItem("nickname")
@@ -85,7 +87,7 @@ function Header() {
         </ul>
         <div className="gnb-wrap">
           <Link to="/" className="header-logo">
-            <img src={`http://localhost:5500/content/img/main/logo.png`} alt="ILOKE logo" />
+            <img src={`${bkURL}/content/img/main/logo.png`} alt="ILOKE logo" />
           </Link>
           <div className="gnb">
             <ul>
