@@ -2,10 +2,13 @@ const db = require('mysql2');
 
 // 데이터베이스 연결 객체 생성
 const conn = db.createPool({
-    host: 'localhost',
-    user: 'iloke',
-    password: '1q2w3e4r!@#',
-    database: 'iloke'
+    //host: 'svc.sel4.cloudtype.app',
+    //port:32122,
+    
+    host: 'mariadb',
+    user: 'root',
+    password: '1234',
+    database: 'iloke' 
 });
 
 // 서버 종료 시 DB 연결 종료
