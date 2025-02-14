@@ -59,8 +59,15 @@ app.use(session({
 
 // CORS 설정
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:5500"], // 프론트엔드 주소
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:5500",
+    "https://web-iloke-front-m746cjpj8dde2ebf.sel4.cloudtype.app", // Cloudtype 프론트엔드
+    "https://port-0-iloke-m746cjpj8dde2ebf.sel4.cloudtype.app" // Cloudtype 백엔드
+  ],
   credentials: true,
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
 // 로깅 미들웨어 (필요시 주석 처리)
