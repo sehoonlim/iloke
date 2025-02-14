@@ -87,7 +87,7 @@ function Header() {
         </ul>
         <div className="gnb-wrap">
           <Link to="/" className="header-logo">
-            <img src={`${bkURL}/content/img/main/logo.png`} alt="ILOKE logo" />
+            <img src={`/content/img/main/logo.png`} alt="ILOKE logo" />
           </Link>
           <div className="gnb">
             <ul>
