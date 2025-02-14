@@ -62,7 +62,8 @@ app.use(cors({
   origin: [
     "http://localhost:3000",
     "http://localhost:5500",
-    "https://web-iloke-front-m746cjpj8dde2ebf.sel4.cloudtype.app", // Cloudtype 프론트엔드
+    "https://web-iloke-front-m746cjpj8dde2ebf.sel4.cloudtype.app", // Cloudtype 관리자페이지
+    "https://web-iloke-mall-m746cjpj8dde2ebf.sel4.cloudtype.app", // Cloudtype 사용자페이지
     "https://port-0-iloke-m746cjpj8dde2ebf.sel4.cloudtype.app" // Cloudtype 백엔드
   ],
   credentials: true,
